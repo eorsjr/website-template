@@ -1,0 +1,23 @@
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.image-grid img {
+    margin: 10px auto;
+    flex: 49%;
+    max-width: 49%;
+}
+
+@media screen and (orientation:landscape) {
+    .image-grid img {
+        flex: 32%;
+        max-width: 32%;
+    }
+}

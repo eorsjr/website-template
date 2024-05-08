@@ -1,0 +1,27 @@
+.slideshow-container {
+    width: 100%;
+    aspect-ratio: 2.4/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slideshow-image {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

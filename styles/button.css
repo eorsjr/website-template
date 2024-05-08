@@ -1,0 +1,27 @@
+button {
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+section button {
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.icon-button {
+    width: 72px;
+    height: 72px !important;
+    line-height: 72px !important;
+    font-size: xx-large !important;
+    border-radius: 100%;
+}
