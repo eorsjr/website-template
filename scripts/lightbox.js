@@ -13,11 +13,6 @@ function switchSlide(n) {
     showSlides();
 }
 
-function setCurrentSlide(chosenSlide) {
-    currentSlideIndex = chosenSlide - 1;
-    showSlides();
-}
-
 function showSlides() {
     let lightboxTargets = document.getElementsByClassName("lightbox-target");
 
@@ -45,4 +40,12 @@ function showSlides() {
     }
 
     caption.innerHTML = chosenImage.alt;
+}
+
+let lightboxTargets = document.getElementsByClassName("lightbox-target");
+for (let i = 0; i < lightboxTargets.length; i++) {
+    lightboxTargets[i].addEventListener("click", function () {
+        currentSlideIndex = i;
+        showSlides();
+    });
 }
