@@ -18,15 +18,16 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Anta&family=Pattaya&family=Poppins&family=Limelight&display=swap');
     </style>
 </head>
 
-<body class="silver">
+<body>
     <nav>
         <button onclick="window.location.href='index.html';"
             class="material-symbols-outlined icon-button home-button active">home</button>
-        <button class="material-symbols-outlined icon-button palette-button" onclick="toggleTheme()">palette</button>
+        <button class="material-symbols-outlined icon-button palette-button" onclick="switchTheme()">palette</button>
+        <button class="material-symbols-outlined icon-button font-button" onclick="switchFont()">brand_family</button>
         <button onclick="toggleNavigation()" class="material-symbols-outlined icon-button menu-button">menu</button>
         <div class="links">
             <a href="#!">Other 1</a>
@@ -147,7 +148,7 @@
     <script src="scripts/content-reveal.js"></script>
     <script src="scripts/lightbox.js"></script>
     <script src="scripts/slideshow.js"></script>
-    <script src="scripts/theme-preference.js"></script>
+    <script src="scripts/switch-style.js"></script>
 </body>
 
 </html>
