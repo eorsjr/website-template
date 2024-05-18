@@ -8,11 +8,8 @@ nav {
   z-index: 1;
 }
 
-nav .palette-button {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+nav .icon-button {
+  float: left;
 }
 
 nav .menu-button {
@@ -37,14 +34,9 @@ nav.responsive {
   height: 100vh;
 }
 
-nav.responsive .home-button {
-  margin-top: calc(100vh - 72px);
-}
-
-nav.responsive .palette-button {
-  margin-top: calc(100vh - 72px);
-}
-
+nav.responsive .home-button,
+nav.responsive .palette-button,
+nav.responsive .font-button,
 nav.responsive .menu-button {
   margin-top: calc(100vh - 72px);
 }
@@ -68,11 +60,6 @@ nav.responsive .links a {
 }
 
 @media screen and (orientation:landscape) {
-
-  nav .icon-button {
-    position: static;
-    float: left;
-  }
 
   nav .menu-button {
     display: none;
