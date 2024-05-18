@@ -1,3 +1,5 @@
+/* This code is responsible for hiding/revealing the full page navigation menu. */
+
 let navigation = document.querySelector("nav");
 
 function checkOrientation() {

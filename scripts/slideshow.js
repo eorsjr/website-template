@@ -1,6 +1,9 @@
+/* This code is responsible for the slideshow feature. */
 let currentIndex = -1;
 let slideshowTargets = document.getElementsByClassName("slideshow-image");
+
 slideshow();
+
 function slideshow() {
     for (let i = 0; i < slideshowTargets.length; i++) {
         slideshowTargets[i].style.display = "none";

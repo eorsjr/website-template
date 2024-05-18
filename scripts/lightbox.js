@@ -1,3 +1,5 @@
+/* This code is responsible for the lightbox feature. */
+
 function openLightbox() {
     document.getElementById("lightbox-overlay").style.display = "block";
 }
@@ -43,6 +45,7 @@ function showSlides() {
 }
 
 let lightboxTargets = document.getElementsByClassName("lightbox-target");
+
 for (let i = 0; i < lightboxTargets.length; i++) {
     lightboxTargets[i].addEventListener("click", function () {
         currentSlideIndex = i;
