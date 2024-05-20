@@ -1,20 +1,30 @@
-/* This code is responsible for hiding/revealing the full page navigation menu. */
+/* This code is responsible for hiding/revealing the navigation menu. */
 
-let navigation = document.querySelector("nav");
+let menu = document.querySelector(".menu");
+let navState = 0;
 
-function checkOrientation() {
-    if (navigation.classList.contains("responsive") && window.innerHeight < window.innerWidth) {
-        navigation.classList.remove("responsive");
+window.onresize = function () {
+    if (window.innerHeight < window.innerWidth) {
+        navState = 0;
+        $(".menu").css("height", 72);
+        menu.style.display = "block";
+    }
+    else {
+        if (navState === 0) {
+            menu.style.display = "none";
+        }
     }
 }
 
-setInterval(checkOrientation, 500);
-
-
 function toggleNavigation() {
-    if (navigation.classList.contains("responsive")) {
-        navigation.classList.remove("responsive");
+
+    $(".menu").css("height", window.innerHeight - 72);
+
+    if (navState === 0) {
+        navState = 1;
     } else {
-        navigation.classList.add("responsive");
+        navState = 0;
     }
+
+    $(".menu").slideToggle(500);
 }
