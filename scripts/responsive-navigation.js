@@ -3,7 +3,7 @@
 let menu = document.querySelector(".menu");
 let navState = 0;
 
-window.onresize = function () {
+function updateMenuVisibility() {
     if (window.innerHeight < window.innerWidth) {
         navState = 0;
         $(".menu").css("height", 72);
@@ -15,6 +15,8 @@ window.onresize = function () {
         }
     }
 }
+
+window.addEventListener("resize", updateMenuVisibility);
 
 function toggleNavigation() {
 
