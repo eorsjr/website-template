@@ -191,7 +191,7 @@ a {
     color: var(--link);
 }
 
-nav {
+nav * {
     background: var(--nav);
     color: var(--on-primary);
 }
@@ -237,23 +237,12 @@ section button {
     --level-8: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-nav {
+.navbar {
     box-shadow: var(--level-3);
-    transition: bottom 0.5s ease, background-color 0.5s ease;
 }
 
-nav.responsive {
-    animation: fadeIn 0.5s;
+nav * {
+    transition: bottom 0.5s ease, background-color 0.5s ease;
 }
 
 .icon-button {
@@ -302,10 +291,6 @@ section button:active {
     box-shadow: var(--level-4);
     transform: scale(1.1);
     transition: all 0s ease;
-}
-
-.lightbox-overlay {
-    animation: fadeIn 0.5s;
 }
 
 .lightbox-overlay .icon-button:hover {
