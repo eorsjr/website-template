@@ -2,7 +2,7 @@
 
 let prevScrollPos = window.scrollY;
 
-window.onscroll = function () {
+function hideNavigation() {
     if (($(".menu").css("display") === "none" && window.innerHeight > window.innerWidth) || window.innerHeight < window.innerWidth) {
         let currentScrollPos = window.scrollY;
 
@@ -17,3 +17,5 @@ window.onscroll = function () {
         prevScrollPos = currentScrollPos;
     }
 }
+
+window.addEventListener("scroll", hideNavigation);
