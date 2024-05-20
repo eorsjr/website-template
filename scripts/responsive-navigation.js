@@ -16,7 +16,14 @@ function updateMenuVisibility() {
     }
 }
 
+function updateMenuHeight() {
+    if (navState === 1) {
+        $(".menu").css("height", window.innerHeight - 72);
+    }
+}
+
 window.addEventListener("resize", updateMenuVisibility);
+window.addEventListener("scroll", updateMenuHeight);
 
 function toggleNavigation() {
 
