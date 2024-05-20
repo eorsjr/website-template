@@ -1,11 +1,11 @@
 /* This code is responsible for the lightbox feature. */
 
 function openLightbox() {
-    document.getElementById("lightbox-overlay").style.display = "block";
+    $("#lightbox-overlay").fadeIn();
 }
 
 function closeLightbox() {
-    document.getElementById("lightbox-overlay").style.display = "none";
+    $("#lightbox-overlay").fadeOut();
 }
 
 let currentSlideIndex;
