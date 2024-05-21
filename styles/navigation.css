@@ -46,10 +46,10 @@ nav * .active {
     transform: translate(-50%, -50%);
   }
 
-  .menu .links a {
+  .menu a {
     display: block;
     text-align: center;
-    line-height: normal;
+    line-height: 150%;
     font-size: xx-large;
   }
 }
