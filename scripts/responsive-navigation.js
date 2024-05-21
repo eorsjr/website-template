@@ -1,43 +1,38 @@
 /* This code is responsible for hiding/revealing the navigation menu. */
 
 let menu = document.querySelector(".menu");
-let navState = 0;
+let mobileMenuVisible = false;
 
 function updateMenuVisibility() {
     if (window.innerHeight < window.innerWidth) {
-        navState = 0;
-        $(".menu").css("height", 72);
         menu.style.display = "block";
+        mobileMenuVisible = false;
+        toggleScrolling();
     }
     else {
-        if (navState === 0) {
+        if (mobileMenuVisible === false) {
             menu.style.display = "none";
         }
     }
 }
 
 function updateMenuHeight() {
-    if (navState === 1) {
+    if (mobileMenuVisible) {
         $(".menu").css("height", window.innerHeight - 72);
+    } else {
+        $(".menu").css("height", 72);
     }
+}
+
+function toggleNavigation() {
+    mobileMenuVisible = !mobileMenuVisible;
+
+    $(".menu").css("height", window.innerHeight - 72);
+    $(".menu").slideToggle(500);
+    toggleScrolling();
 }
 
 window.addEventListener("resize", updateMenuVisibility);
-window.addEventListener("scroll", updateMenuHeight);
-
-function toggleNavigation() {
-
-    $(".menu").css("height", window.innerHeight - 72);
-
-    if (navState === 0) {
-        navState = 1;
-        document.documentElement.style.overflow = "hidden";
-        document.body.scroll = "no";
-    } else {
-        navState = 0;
-        document.documentElement.style.overflow = "scroll";
-        document.body.scroll = "yes";
-    }
-
-    $(".menu").slideToggle(500);
-}
+window.addEventListener("resize", updateMenuHeight);
+window.addEventListener("orientationchange", updateMenuVisibility);
+window.addEventListener("orientationchange", updateMenuHeight);
