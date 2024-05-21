@@ -31,8 +31,12 @@ function toggleNavigation() {
 
     if (navState === 0) {
         navState = 1;
+        document.documentElement.style.overflow = "hidden";
+        document.body.scroll = "no";
     } else {
         navState = 0;
+        document.documentElement.style.overflow = "scroll";
+        document.body.scroll = "yes";
     }
 
     $(".menu").slideToggle(500);

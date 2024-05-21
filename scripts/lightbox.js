@@ -2,10 +2,14 @@
 
 function openLightbox() {
     $("#lightbox-overlay").fadeIn();
+    document.documentElement.style.overflow = "hidden";
+    document.body.scroll = "no";
 }
 
 function closeLightbox() {
     $("#lightbox-overlay").fadeOut();
+    document.documentElement.style.overflow = "scroll";
+    document.body.scroll = "yes";
 }
 
 let currentSlideIndex;
