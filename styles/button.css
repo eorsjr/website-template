@@ -16,6 +16,30 @@ section button {
     height: 50px;
     border-radius: 10px;
     margin-bottom: 10px;
+    background: var(--button);
+    color: var(--on-secondary);
+    box-shadow: var(--level-2);
+    transition: all 0.5s ease;
+}
+
+section button:hover {
+    background: var(--button) radial-gradient(circle, transparent 1%, var(--button) 1%) center/15000%;
+}
+
+section button:active {
+    background-color: white;
+    background-size: 100%;
+    box-shadow: var(--level-4);
+    transform: scale(1.1);
+    transition: all 0s ease;
+}
+
+@media (hover:hover) {
+
+    section button:hover {
+        box-shadow: var(--level-4);
+        transform: scale(1.1);
+    }
 }
 
 .icon-button {
@@ -24,4 +48,7 @@ section button {
     line-height: 72px !important;
     font-size: xx-large !important;
     border-radius: 100%;
+    background: none;
+    color: white;
+    transition: background 0.5s ease;
 }

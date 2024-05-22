@@ -3,20 +3,18 @@ section {
     width: 95%;
     opacity: 0;
     transform: translateY(50px);
+    padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 50px;
+    background: var(--surface);
+    color: var(--on-surface);
+    box-shadow: var(--level-1);
+    transition: all 1s ease;
 }
 
 section.active {
     transform: translateY(0);
     opacity: 1;
-}
-
-section:first-of-type {
-    margin-bottom: 50px;
-}
-
-section:not(:first-of-type) {
-    margin-bottom: 50px;
 }
 
 section:last-of-type {
@@ -51,6 +49,26 @@ section .side-by-side .right-side {
 section img {
     width: 100%;
     height: auto;
+}
+
+section img.clickable {
+    cursor: pointer;
+    box-shadow: var(--level-2);
+    transition: all 0.5s ease;
+}
+
+section img.clickable:active {
+    box-shadow: var(--level-4);
+    transform: scale(1.1);
+    transition: all 0s ease;
+}
+
+@media (hover:hover) {
+
+    section img.clickable:hover {
+        box-shadow: var(--level-4);
+        transform: scale(1.1);
+    }
 }
 
 @media screen and (orientation: landscape) {

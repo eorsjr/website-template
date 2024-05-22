@@ -1,14 +1,33 @@
 nav * {
   z-index: 1;
   width: 100%;
+  background: var(--nav);
+  color: var(--on-primary);
+  transition: bottom 0.5s ease, background-color 0.5s ease;
 }
 
-nav * a {
+nav a {
   text-decoration: none;
 }
 
-nav * .active {
+nav .active {
   text-decoration: underline;
+  color: var(--nav-active) !important;
+}
+
+nav button {
+  background: var(--nav);
+  color: var(--on-primary) !important;
+}
+
+nav button:hover {
+  background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
+}
+
+nav button:active {
+  background-color: white;
+  background-size: 100%;
+  transition: all 0s ease;
 }
 
 .navbar {
@@ -17,6 +36,7 @@ nav * .active {
   left: 0;
   height: 72px;
   line-height: 72px;
+  box-shadow: var(--level-3);
 }
 
 .navbar .icon-button {

@@ -36,6 +36,16 @@
     height: 150px;
 }
 
+.lightbox-overlay .icon-button:hover {
+    background: radial-gradient(circle, transparent 1%, black 1%) center/15000%;
+}
+
+.lightbox-overlay .icon-button:active {
+    background-color: white;
+    background-size: 100%;
+    transition: all 0s ease;
+}
+
 .lightbox-overlay .close-button {
     position: fixed;
     top: 0;
