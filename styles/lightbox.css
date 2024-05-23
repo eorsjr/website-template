@@ -1,4 +1,5 @@
 .lightbox-overlay {
+    z-index: 2;
     position: fixed;
     display: none;
     width: 100vw;
@@ -8,7 +9,6 @@
     right: 0;
     bottom: 0;
     background: black;
-    z-index: 2;
     color: white;
 }
 
@@ -34,34 +34,4 @@
     text-align: center;
     padding: 10px 0;
     height: 150px;
-}
-
-.lightbox-overlay .icon-button:hover {
-    background: radial-gradient(circle, transparent 1%, black 1%) center/15000%;
-}
-
-.lightbox-overlay .icon-button:active {
-    background-color: white;
-    background-size: 100%;
-    transition: all 0s ease;
-}
-
-.lightbox-overlay .close-button {
-    position: fixed;
-    top: 0;
-    right: 0;
-}
-
-.lightbox-overlay .previous-button {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.lightbox-overlay .next-button {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
 }
