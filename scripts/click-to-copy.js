@@ -12,7 +12,7 @@ document.querySelectorAll('table td').forEach(cell => {
 });
 
 function copyTable(copyButton) {
-    let table = copyButton.previousElementSibling;
+    let table = copyButton.previousElementSibling.querySelector("table");
     let columnWidths = [];
 
     for (let row of table.rows) {
