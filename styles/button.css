@@ -6,6 +6,36 @@ button {
     outline: inherit;
 }
 
+nav button {
+    background: var(--nav);
+    color: var(--on-primary) !important;
+  }
+  
+  nav button:hover {
+    background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
+  }
+  
+  nav button:active {
+    background-color: white;
+    background-size: 100%;
+    transition: all 0s ease;
+  }
+
+  .navbar .icon-button {
+    float: left;
+  }
+  
+  .navbar .menu-button {
+    position: absolute;
+    right: 0;
+  }
+
+  @media screen and (orientation:landscape) {
+    .navbar .menu-button {
+      display: none;
+    }
+  }
+
 section button {
     margin: 0 auto;
     display: block;
@@ -50,5 +80,5 @@ section button:active {
     border-radius: 100%;
     background: none;
     color: white;
-    transition: background 0.5s ease;
+    transition: all 0.5s ease;
 }

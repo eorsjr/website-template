@@ -15,21 +15,6 @@ nav .active {
   color: var(--nav-active) !important;
 }
 
-nav button {
-  background: var(--nav);
-  color: var(--on-primary) !important;
-}
-
-nav button:hover {
-  background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
-}
-
-nav button:active {
-  background-color: white;
-  background-size: 100%;
-  transition: all 0s ease;
-}
-
 .navbar {
   position: fixed;
   bottom: 0;
@@ -37,15 +22,6 @@ nav button:active {
   height: 72px;
   line-height: 72px;
   box-shadow: var(--level-3);
-}
-
-.navbar .icon-button {
-  float: left;
-}
-
-.navbar .menu-button {
-  position: absolute;
-  right: 0;
 }
 
 @media screen and (orientation:portrait) {
@@ -75,9 +51,6 @@ nav button:active {
 }
 
 @media screen and (orientation:landscape) {
-  .navbar .menu-button {
-    display: none;
-  }
 
   .menu {
     position: fixed;
