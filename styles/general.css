@@ -60,11 +60,13 @@ td, th {
 
 td {
     cursor: pointer;
-    transition: background 0.5s ease;
+    background: var(--secondary);
+    color: var(--on-secondary);
+    transition: all 0.5s ease;
 }
 
 td:hover {
-    background: var(--button) radial-gradient(circle, transparent 1%, var(--button) 1%) center/15000%;
+    background: var(--secondary) radial-gradient(circle, transparent 1%, var(--secondary) 1%) center/15000%;
 }
 
 td:active {
