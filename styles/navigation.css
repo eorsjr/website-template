@@ -28,7 +28,6 @@ nav .active .icon-title {
   position: fixed;
   height: 72px;
   bottom: 0;
-  /* box-shadow: var(--level-3); */
 }
 
 @media screen and (orientation:portrait) {
