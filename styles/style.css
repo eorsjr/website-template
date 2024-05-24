@@ -155,27 +155,23 @@
     --button: var(--secondary);
 }
 
+:root .green.dark-theme,
+:root .yellow.dark-theme,
+:root .orange.dark-theme,
+:root .pink.dark-theme,
+:root .purple.dark-theme,
+:root .blue.dark-theme,
+:root .silver.dark-theme {
+    --background: #121212;
+    --surface: #212121;
+    --on-primary: #FFFFFF;
+    --on-background: #FFFFFF;
+    --on-surface: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-
-    :root .green,
-    :root .yellow,
-    :root .orange,
-    :root .pink,
-    :root .purple,
-    :root .blue,
-    :root .silver {
-        --background: #121212;
-        --surface: #212121;
-        --on-primary: #FFFFFF;
-        --on-background: #FFFFFF;
-        --on-surface: #FFFFFF;
-
-        --nav: #424242;
-        --nav-active: var(--secondary-variant);
-        --link: var(--secondary-variant);
-        --button: var(--secondary);
-    }
+    --nav: #424242;
+    --nav-active: var(--secondary-variant);
+    --link: var(--secondary-variant);
+    --button: var(--secondary);
 }
 
 /* || Shadows */

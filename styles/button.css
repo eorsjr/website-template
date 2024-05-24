@@ -1,84 +1,137 @@
+/* || General */
+
 button {
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transition: all 0.5s ease;
 }
 
-nav button {
-    background: var(--nav);
-    color: var(--on-primary) !important;
-  }
-  
-  nav button:hover {
-    background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
-  }
-  
-  nav button:active {
-    background-color: white;
-    background-size: 100%;
-    transition: all 0s ease;
-  }
+button:active {
+  background-color: white !important;
+  background-size: 100% !important;
+  transition: none;
+}
 
-  .navbar .icon-button {
-    float: left;
-  }
-  
-  .navbar .menu-button {
-    position: absolute;
-    right: 0;
-  }
+.text-button {
+  font-size: large;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  min-height: 50px;
+  padding: 10px;
+}
 
-  @media screen and (orientation:landscape) {
-    .navbar .menu-button {
-      display: none;
-    }
-  }
+.material-symbols-outlined {
+  font-size: xx-large !important;
+  display: block !important;
+}
+
+/* || Section button */
 
 section button {
-    margin: 0 auto;
-    display: block;
-    text-transform: uppercase;
-    width: fit-content;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 50px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    background: var(--button);
-    color: var(--on-secondary);
-    box-shadow: var(--level-2);
-    transition: all 0.5s ease;
+  margin: 0 auto;
+  display: block !important;
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  color: var(--on-secondary);
+  box-shadow: var(--level-2);
+  background-color: var(--button);
 }
 
 section button:hover {
-    background: var(--button) radial-gradient(circle, transparent 1%, var(--button) 1%) center/15000%;
+  background: var(--button) radial-gradient(circle, transparent 1%, var(--button) 1%) center/15000%;
 }
 
 section button:active {
-    background-color: white;
-    background-size: 100%;
-    box-shadow: var(--level-4);
-    transform: scale(1.1);
-    transition: all 0s ease;
+  box-shadow: var(--level-4);
+  transform: scale(1.1);
+}
+
+section .icon-button {
+  height: auto;
+  width: fit-content;
 }
 
 @media (hover:hover) {
-
-    section button:hover {
-        box-shadow: var(--level-4);
-        transform: scale(1.1);
-    }
+  section button:hover {
+    box-shadow: var(--level-4);
+    transform: scale(1.1);
+  }
 }
 
-.icon-button {
-    width: 72px;
-    height: 72px !important;
-    line-height: 72px !important;
-    font-size: xx-large !important;
-    border-radius: 100%;
-    background: none;
-    color: white;
-    transition: all 0.5s ease;
+/* || Navigation and Lightbox buttons */
+
+.navbar .icon-button,
+.lightbox-overlay .icon-button {
+  width: 72px !important;
+  height: 72px !important;
+  border-radius: 100%;
+}
+
+/* || Navigation buttons */
+
+.navbar .icon-button {
+  background: none;
+  color: var(--on-primary);
+}
+
+.navbar .icon-button:hover {
+  background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
+}
+
+.navbar .menu-button {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (orientation:portrait) {
+  .navbar .home-button {
+    position: absolute;
+    left: 0;
+  }
+}
+@media screen and (orientation:landscape) {
+  .navbar .menu-button {
+    display: none;
+  }
+}
+
+/* || Lightbox buttons */
+
+.lightbox-overlay .icon-button {
+  background: none;
+  color: white;
+}
+
+.lightbox-overlay .icon-button:hover {
+  background: radial-gradient(circle, transparent 1%, black 1%) center/15000%;
+}
+
+.lightbox-overlay .icon-button:active {
+  background-color: white;
+  background-size: 100%;
+  transition: all 0s ease;
+}
+
+.lightbox-overlay .close-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.lightbox-overlay .previous-button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.lightbox-overlay .next-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }

@@ -1,30 +1,38 @@
-nav * {
-  z-index: 1;
-  width: 100%;
-  background: var(--nav);
-  color: var(--on-primary);
-  transition: bottom 0.5s ease, background-color 0.5s ease;
-}
+/* || Navigation */
 
 nav a {
   text-decoration: none;
+  color: var(--on-primary);
 }
 
 nav .active {
-  text-decoration: underline;
   color: var(--nav-active) !important;
 }
 
+nav a.active,
+nav .active .icon-title {
+  text-decoration: underline;
+}
+
+.navbar,
+.menu {
+  z-index: 1;
+  width: 100%;
+  background-color: var(--nav);
+  transition: bottom 0.5s ease, background-color 0.5s ease;
+}
+
 .navbar {
+  display: flex;
+  justify-content: center;
   position: fixed;
-  bottom: 0;
-  left: 0;
   height: 72px;
-  line-height: 72px;
-  box-shadow: var(--level-3);
+  bottom: 0;
+  /* box-shadow: var(--level-3); */
 }
 
 @media screen and (orientation:portrait) {
+
   .menu {
     position: fixed;
     top: 0;
@@ -52,11 +60,16 @@ nav .active {
 
 @media screen and (orientation:landscape) {
 
+  .navbar {
+    left: 0;
+    width: auto;
+  }
+
   .menu {
     position: fixed;
     bottom: 0;
-    width: calc(100% - 3 * 72px);
-    margin-left: calc(3 * 72px);
+    width: calc(100% - 4 * 72px);
+    margin-left: calc(4 * 72px);
     height: 72px;
     line-height: 72px;
     display: block;

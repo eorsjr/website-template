@@ -25,13 +25,16 @@
 <body>
     <nav>
         <div class="navbar">
-            <button onclick="window.location.href='index.html';"
-                class="material-symbols-outlined icon-button home-button active">home</button>
-            <button class="material-symbols-outlined icon-button palette-button"
-                onclick="switchTheme()">palette</button>
-            <button class="material-symbols-outlined icon-button font-button"
-                onclick="switchFont()">brand_family</button>
-            <button onclick="toggleNavigation()" class="material-symbols-outlined icon-button menu-button">menu</button>
+            <button class="icon-button home-button active" onclick="window.location.href='index.html';"><span
+                    class="material-symbols-outlined">home</span><span class="icon-title">Home</span></button>
+            <button class="icon-button color-scheme-button"><span
+                    class="material-symbols-outlined">dark_mode</span><span class="icon-title">Toggle</span></button>
+            <button class="icon-button palette-button"><span class="material-symbols-outlined">palette</span><span
+                    class="icon-title">Palette</span></button>
+            <button class="icon-button font-button"><span class="material-symbols-outlined">brand_family</span><span
+                    class="icon-title">Font</span></button>
+            <button class="icon-button menu-button"><span class="material-symbols-outlined">menu</span><span
+                    class="icon-title">Menu</span></button>
         </div>
         <div class="menu">
             <div class="links">
@@ -89,7 +92,7 @@
                         inceptos.</a>
                 </p>
             </div>
-            <button onclick="window.location.href='#section2';">Section 2</button>
+            <button class="text-button" onclick="window.location.href='#section2';">Section 2</button>
         </section>
         <section id="section2">
             <h2>Section Heading</h2>
@@ -125,7 +128,9 @@
                             </tr>
                         </table>
                     </div>
-                    <button onclick="copyTable(this)">Copy table</button>
+                    <button class="icon-button" onclick="copyTable(this)"><span
+                            class="material-symbols-outlined">content_copy</span><span class="icon-title">Copy
+                            Table</span></button>
                 </div>
             </div>
             <h3>Subheading</h3>
@@ -152,13 +157,13 @@
     <footer>Footer</footer>
 
     <div id="lightbox-overlay" class="lightbox-overlay">
-        <button id="close-button" class="material-symbols-outlined icon-button close-button"
-            onclick="closeLightbox()">close</button>
+        <button id="close-button" class="icon-button close-button" onclick="closeLightbox()"><span
+                class="material-symbols-outlined">close</span></button>
         <div class="lightbox-content">
-            <button id="previous-button" class="material-symbols-outlined icon-button previous-button"
-                onclick="switchSlide(-1)">arrow_back</button>
-            <button id="next-button" class="material-symbols-outlined icon-button next-button"
-                onclick="switchSlide(+1)">arrow_forward</button>
+            <button id="previous-button" class="icon-button previous-button" onclick="switchSlide(-1)"><span
+                    class="material-symbols-outlined">arrow_back</span></button>
+            <button id="next-button" class="icon-button next-button" onclick="switchSlide(+1)"><span
+                    class="material-symbols-outlined">arrow_forward</span></button>
             <img id="lightbox-image" class="lightbox-image">
             <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
