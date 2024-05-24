@@ -82,17 +82,6 @@ section .icon-button {
   background: var(--nav) radial-gradient(circle, transparent 1%, var(--nav) 1%) center/15000%;
 }
 
-.navbar .menu-button {
-  position: absolute;
-  right: 0;
-}
-
-@media screen and (orientation:portrait) {
-  .navbar .home-button {
-    position: absolute;
-    left: 0;
-  }
-}
 @media screen and (orientation:landscape) {
   .navbar .menu-button {
     display: none;

@@ -33,6 +33,10 @@ nav .active .icon-title {
 
 @media screen and (orientation:portrait) {
 
+  .navbar {
+    justify-content: space-evenly;
+  }
+
   .menu {
     position: fixed;
     top: 0;
