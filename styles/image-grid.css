@@ -1,3 +1,5 @@
+/* || Image grid styles */
+
 .image-grid {
     display: flex;
     justify-content: space-between;
