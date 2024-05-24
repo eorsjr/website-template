@@ -1,5 +1,6 @@
 /* This code is reponsible for changing and storing style preferences based on user interaction. */
 
+const themes = ["silver", "green", "yellow", "orange", "pink", "purple", "blue"];
 const fonts = ["Noto Sans", "Anta", "Limelight", "Pattaya"];
 let themeIndex = 0;
 let fontIndex = 0;
