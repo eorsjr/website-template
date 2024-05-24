@@ -1,7 +1,6 @@
 /* This code is reponsible for changing and storing style preferences based on user interaction. */
 
-let themes = ["silver", "green", "yellow", "orange", "pink", "purple", "blue"]
-let fonts = ["Poppins", "Anta", "Limelight", "Pattaya"];
+const fonts = ["Noto Sans", "Anta", "Limelight", "Pattaya"];
 let themeIndex = 0;
 let fontIndex = 0;
 let h1s = document.getElementsByTagName("h1");
