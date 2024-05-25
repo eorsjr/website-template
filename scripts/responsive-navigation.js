@@ -25,11 +25,12 @@ function updateMenuVisibility() {
  * Toggles the text of the menu button between "menu" and "close" based on the visibility of the mobile menu.
  */
 function toggleMenuButton() {
-    let menuButton = document.querySelector(".menu-button span");
     if (mobileMenuVisible) {
-        menuButton.innerText = "close";
+        document.querySelector(".menu-button").ariaLabel = "Close Menu";
+        document.querySelector(".menu-button span").innerText = "close";
     } else {
-        menuButton.innerText = "menu";
+        document.querySelector(".menu-button").ariaLabel = "Open Menu";
+        document.querySelector(".menu-button span").innerText = "menu";
     }
 }
 

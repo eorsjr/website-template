@@ -25,15 +25,15 @@
 <body>
     <nav>
         <div class="navbar">
-            <button class="icon-button home-button active" onclick="window.location.href='index.html';"><span
+            <button class="icon-button home-button active" aria-label="Home" onclick="window.location.href='index.html';"><span
                     class="material-symbols-outlined">home</span><span class="icon-title">Home</span></button>
-            <button class="icon-button color-scheme-button"><span
+            <button class="icon-button color-scheme-button" aria-label="Switch to Dark Mode"><span
                     class="material-symbols-outlined">dark_mode</span><span class="icon-title">Toggle</span></button>
-            <button class="icon-button palette-button"><span class="material-symbols-outlined">palette</span><span
+            <button class="icon-button palette-button" aria-label="Toggle Color Palette"><span class="material-symbols-outlined">palette</span><span
                     class="icon-title">Palette</span></button>
-            <button class="icon-button font-button"><span class="material-symbols-outlined">brand_family</span><span
+            <button class="icon-button font-button" aria-label="Toggle Font"><span class="material-symbols-outlined">brand_family</span><span
                     class="icon-title">Font</span></button>
-            <button class="icon-button menu-button"><span class="material-symbols-outlined">menu</span><span
+            <button class="icon-button menu-button" aria-label="Open Menu"><span class="material-symbols-outlined">menu</span><span
                     class="icon-title">Menu</span></button>
         </div>
         <div class="menu">
@@ -128,7 +128,7 @@
                             </tr>
                         </table>
                     </div>
-                    <button class="icon-button" onclick="copyTable(this)"><span
+                    <button class="icon-button" aria-label="Copy Table" onclick="copyTable(this)"><span
                             class="material-symbols-outlined">content_copy</span><span class="icon-title">Copy
                             Table</span></button>
                 </div>
@@ -157,12 +157,12 @@
     <footer>Footer</footer>
 
     <div id="lightbox-overlay" class="lightbox-overlay">
-        <button id="close-button" class="icon-button close-button" onclick="closeLightbox()"><span
+        <button id="close-button" class="icon-button close-button" aria-label="Close Lightbox" onclick="closeLightbox()"><span
                 class="material-symbols-outlined">close</span></button>
         <div class="lightbox-content">
-            <button id="previous-button" class="icon-button previous-button" onclick="switchSlide(-1)"><span
+            <button id="previous-button" class="icon-button previous-button" aria-label="Previous" onclick="switchSlide(-1)"><span
                     class="material-symbols-outlined">arrow_back</span></button>
-            <button id="next-button" class="icon-button next-button" onclick="switchSlide(+1)"><span
+            <button id="next-button" class="icon-button next-button" aria-label="Next" onclick="switchSlide(+1)"><span
                     class="material-symbols-outlined">arrow_forward</span></button>
             <img id="lightbox-image" class="lightbox-image">
             <div id="lightbox-caption" class="lightbox-caption"></div>

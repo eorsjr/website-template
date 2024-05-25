@@ -127,8 +127,10 @@ function handleColorSchemeChange() {
  */
 function toggleSchemeButton() {
     if (document.body.classList.contains('dark-theme')) {
+        document.querySelector(".color-scheme-button").ariaLabel = "Switch to Light Mode";
         document.querySelector(".color-scheme-button span").innerText = "light_mode";
     } else {
+        document.querySelector(".color-scheme-button").ariaLabel = "Switch to Dark Mode";
         document.querySelector(".color-scheme-button span").innerText = "dark_mode";
     }
 }
