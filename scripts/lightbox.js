@@ -82,3 +82,30 @@ for (let i = 0; i < lightboxTargets.length; i++) {
         showSlides();
     });
 }
+
+/**
+ * Appends the lightbox HTML to the end of the body.
+ */
+function appendLightboxHTML() {
+    const lightboxHTML = `
+        <div id="lightbox-overlay" class="lightbox-overlay">
+            <button id="close-button" class="icon-button close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="lightbox-content">
+                <button id="previous-button" class="icon-button previous-button" aria-label="Previous" onclick="switchSlide(-1)">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <button id="next-button" class="icon-button next-button" aria-label="Next" onclick="switchSlide(+1)">
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+                <img id="lightbox-image" class="lightbox-image">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+}
+
+// Call the function to append the lightbox HTML when the document is ready
+document.addEventListener("DOMContentLoaded", appendLightboxHTML);
