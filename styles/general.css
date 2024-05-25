@@ -53,7 +53,7 @@ footer {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 72px;
+    margin-bottom: calc(72px + env(safe-area-inset-bottom));
 }
 
 /* || Table */
