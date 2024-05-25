@@ -2,24 +2,30 @@
  * This code is responsible for revealing sections with an animation.
  */
 
+// Set initial opacity of sections to 0
+document.querySelectorAll("section").forEach(section => {
+  section.style.opacity = 0;
+});
+
 /**
  * Reveals sections with an animation when they enter the viewport.
  * Checks if each section is within a certain threshold of the viewport height.
- * If a section's top position is less than the viewport height minus the threshold,
- * it adds the "active" class to reveal it; otherwise, it removes the "active" class.
+ * If a section's top or bottom position is within the viewport,
+ * it sets the opacity to 1 to reveal it; otherwise, it sets the opacity to 0 to hide it.
  */
 function reveal() {
-  let reveals = document.querySelectorAll("section");
+  let sections = document.querySelectorAll("section");
 
-  for (let i = 0; i < reveals.length; i++) {
+  for (let section of sections) {
     let windowHeight = window.innerHeight;
-    let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 50; // Threshold for revealing sections
+    let sectionTop = section.getBoundingClientRect().top;
+    let sectionBottom = section.getBoundingClientRect().bottom;
+    let threshold = 150; // Threshold for revealing sections
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active"); // Add "active" class to reveal section
+    if (sectionTop < windowHeight - threshold && sectionBottom > threshold) {
+      section.style.opacity = 1; // Set opacity to 1 to reveal section
     } else {
-      reveals[i].classList.remove("active"); // Remove "active" class to hide section
+      section.style.opacity = 0; // Set opacity to 0 to hide section
     }
   }
 }
