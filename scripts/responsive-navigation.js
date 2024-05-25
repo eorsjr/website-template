@@ -22,18 +22,6 @@ function updateMenuVisibility() {
 }
 
 /**
- * Adjusts the height of the menu based on whether it is visible or not.
- * In mobile view, sets the menu height to the viewport height minus 72 pixels.
- */
-function updateMenuHeight() {
-    if (mobileMenuVisible) {
-        $(".menu").css("height", window.innerHeight - 72);
-    } else {
-        $(".menu").css("height", 72);
-    }
-}
-
-/**
  * Toggles the text of the menu button between "menu" and "close" based on the visibility of the mobile menu.
  */
 function toggleMenuButton() {
@@ -51,7 +39,6 @@ function toggleMenuButton() {
  */
 function toggleNavigation() {
     mobileMenuVisible = !mobileMenuVisible;
-    $(".menu").css("height", window.innerHeight - 72);
     $(".menu").slideToggle(500);
     toggleScrolling();
     toggleMenuButton();
@@ -62,10 +49,8 @@ document.querySelector(".menu-button").addEventListener("click", toggleNavigatio
 
 // Event listeners for window resize to update menu visibility, height, and button text
 window.addEventListener("resize", updateMenuVisibility);
-window.addEventListener("resize", updateMenuHeight);
 window.addEventListener("resize", toggleMenuButton);
 
 // Event listeners for orientation change to update menu visibility, height, and button text
 window.addEventListener("orientationchange", updateMenuVisibility);
-window.addEventListener("orientationchange", updateMenuHeight);
 window.addEventListener("orientationchange", toggleMenuButton);

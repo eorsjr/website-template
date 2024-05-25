@@ -1,7 +1,7 @@
 /* || Lightbox */
 
 .lightbox-overlay {
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     display: none;
     width: 100vw;

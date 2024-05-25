@@ -16,7 +16,6 @@ nav .active .icon-title {
 
 .navbar,
 .menu {
-  z-index: 1;
   width: 100%;
   background-color: var(--nav);
   transition: bottom 0.5s ease, background-color 0.5s ease;
@@ -34,12 +33,16 @@ nav .active .icon-title {
 @media screen and (orientation:portrait) {
 
   .navbar {
+    z-index: 2;
     justify-content: space-evenly;
   }
 
   .menu {
+    z-index: 1;
     position: fixed;
+    height: auto;
     top: 0;
+    bottom: 0;
     display: none;
   }
 
@@ -48,7 +51,7 @@ nav .active .icon-title {
     position: absolute;
     overflow: scroll;
     width: 100%;
-    max-height: 66%;
+    max-height: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -65,11 +68,13 @@ nav .active .icon-title {
 @media screen and (orientation:landscape) {
 
   .navbar {
+    z-index: 1;
     left: 0;
     width: auto;
   }
 
   .menu {
+    z-index: 1;
     position: fixed;
     bottom: 0;
     width: calc(100% - 4 * 72px);
