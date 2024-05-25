@@ -20,8 +20,8 @@ function hideNavigation() {
             document.querySelector(".menu").style.bottom = "0";
         } else {
             // Hide the navigation bar and menu when scrolling down
-            document.querySelector(".navbar").style.bottom = "-100px";
-            document.querySelector(".menu").style.bottom = "-100px";
+            document.querySelector(".navbar").style.bottom = "-150px";
+            document.querySelector(".menu").style.bottom = "-150px";
         }
 
         // Update the previous scroll position to the current position
