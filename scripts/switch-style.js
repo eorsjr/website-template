@@ -124,6 +124,8 @@ function handleColorSchemeChange() {
 
 /**
  * Toggles the text of the color scheme button based on the current color scheme.
+ * If the current color scheme is dark, it updates the button's text and aria-label to indicate switching to light mode.
+ * If the current color scheme is light, it updates the button's text and aria-label to indicate switching to dark mode.
  */
 function toggleSchemeButton() {
     if (document.body.classList.contains('dark-theme')) {

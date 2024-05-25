@@ -22,7 +22,9 @@ function updateMenuVisibility() {
 }
 
 /**
- * Toggles the text of the menu button between "menu" and "close" based on the visibility of the mobile menu.
+ * Toggles the text and aria-label of the menu button between "menu" and "close" based on the visibility of the mobile menu.
+ * If the mobile menu is visible, it updates the button's text and aria-label to indicate closing the menu.
+ * If the mobile menu is not visible, it updates the button's text and aria-label to indicate opening the menu.
  */
 function toggleMenuButton() {
     if (mobileMenuVisible) {
@@ -36,7 +38,8 @@ function toggleMenuButton() {
 
 /**
  * Toggles the visibility of the mobile navigation menu.
- * Changes the menu's height, animates its visibility, and updates the menu button text.
+ * Updates the visibility of the menu with animation and updates the menu button text accordingly.
+ * It toggles the scrolling behavior to prevent scrolling when the menu is open.
  */
 function toggleNavigation() {
     mobileMenuVisible = !mobileMenuVisible;
@@ -48,10 +51,10 @@ function toggleNavigation() {
 // Event listener for menu button click to toggle the navigation menu
 document.querySelector(".menu-button").addEventListener("click", toggleNavigation);
 
-// Event listeners for window resize to update menu visibility, height, and button text
+// Event listeners for window resize to update menu visibility and button text
 window.addEventListener("resize", updateMenuVisibility);
 window.addEventListener("resize", toggleMenuButton);
 
-// Event listeners for orientation change to update menu visibility, height, and button text
+// Event listeners for orientation change to update menu visibility and button text
 window.addEventListener("orientationchange", updateMenuVisibility);
 window.addEventListener("orientationchange", toggleMenuButton);
