@@ -22,6 +22,23 @@ function updateMenuVisibility() {
 }
 
 /**
+ * Adjusts the height of the menu based on orientation.
+ * In landscape view, sets the menu height to 72 pixels.
+ * In portrait view, sets the menu height to the viewport height.
+ */
+function updateMenuHeight() {
+
+    if (window.innerWidth > window.innerHeight) {
+        // Landscape orientation
+        menu.style.height = '72px';
+    } else {
+        // Portrait orientation
+        const vh = window.innerHeight * 0.01;
+        menu.style.height = `${vh * 100}px`;
+    }
+}
+
+/**
  * Toggles the text and aria-label of the menu button between "menu" and "close" based on the visibility of the mobile menu.
  * If the mobile menu is visible, it updates the button's text and aria-label to indicate closing the menu.
  * If the mobile menu is not visible, it updates the button's text and aria-label to indicate opening the menu.
@@ -51,10 +68,15 @@ function toggleNavigation() {
 // Event listener for menu button click to toggle the navigation menu
 document.querySelector(".menu-button").addEventListener("click", toggleNavigation);
 
-// Event listeners for window resize to update menu visibility and button text
+// Event listeners for window resize to update menu visibility, height, and button text
 window.addEventListener("resize", updateMenuVisibility);
+window.addEventListener('resize', updateMenuHeight);
 window.addEventListener("resize", toggleMenuButton);
 
-// Event listeners for orientation change to update menu visibility and button text
+// Event listeners for orientation change to update menu visibility, height, and button text
 window.addEventListener("orientationchange", updateMenuVisibility);
+window.addEventListener('orientationchange', updateMenuHeight);
 window.addEventListener("orientationchange", toggleMenuButton);
+
+// Event listener for DOMContentLoaded to update menu height
+document.addEventListener('DOMContentLoaded', updateMenuHeight);
