@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.1.0](https://github.com/eorsjr/website-template/compare/v2.0.1...v2.1.0)
+
+> 27 May 2024
+
+- docs: :memo: add changelog [`b4f8f72`](https://github.com/eorsjr/website-template/commit/b4f8f72657589551259090b30b4ae1f25c6e5192)
+- feat: :lipstick: update navigation menu [`a75d519`](https://github.com/eorsjr/website-template/commit/a75d5193f771a47d2fec726be892766a0dbc54f8)
+- chore: update .gitignore [`72964e7`](https://github.com/eorsjr/website-template/commit/72964e74bdb6d88830419498143941c14376ce95)
+
 #### [v2.0.1](https://github.com/eorsjr/website-template/compare/v2.0.0...v2.0.1)
 
 > 26 May 2024
