@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v2.2.0](https://github.com/eorsjr/website-template/compare/v2.1.0...v2.2.0)
+
+> 2 June 2024
+
+- feat: :sparkles: add ability to have multiple slideshow containers per page [`295c0a8`](https://github.com/eorsjr/website-template/commit/295c0a845e74de865ee3a5d0a47690e1773be5d0)
+- fix: :bug: update scrolling prevention [`70acc3f`](https://github.com/eorsjr/website-template/commit/70acc3f615d205adae1a33e4861a6d36716baea1)
+- docs: :memo: update changelog [`7cbfb73`](https://github.com/eorsjr/website-template/commit/7cbfb73a2b32c99763c9d1226347aa64d333ae72)
+- chore: update .gitignore [`a9699d1`](https://github.com/eorsjr/website-template/commit/a9699d1e07f7b4e2e2792690a13f18167afaa305)
+
 #### [v2.1.0](https://github.com/eorsjr/website-template/compare/v2.0.1...v2.1.0)
 
 > 27 May 2024
