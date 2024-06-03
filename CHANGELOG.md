@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+### [v3.0.0](https://github.com/eorsjr/website-template/compare/v2.2.0...v3.0.0)
+
+> 3 June 2024
+
+- feat: :sparkles: implement Material 3 design overhaul [`fbc009b`](https://github.com/eorsjr/website-template/commit/fbc009bda7a612c7c6a331529b850f9eaf167a93)
+- docs: :memo: update changelog [`6e34e9c`](https://github.com/eorsjr/website-template/commit/6e34e9cd5d81dd8de86707f1ceb96d57aba6767e)
+
 #### [v2.2.0](https://github.com/eorsjr/website-template/compare/v2.1.0...v2.2.0)
 
 > 2 June 2024
