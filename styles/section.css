@@ -2,76 +2,72 @@
 
 section {
     margin: 0 auto;
-    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 50px;
-    background: var(--surface);
-    color: var(--on-surface);
-    box-shadow: var(--level-1);
-    transition: all 1s ease;
+    transition: width 1s ease, opacity 1s ease;
 }
 
 section:last-of-type {
     margin-bottom: 0px;
 }
 
-section .centered {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-section .side-by-side {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 20px;
-}
-
-section .side-by-side .left-side {
-    width: 100%;
-}
-
-section .side-by-side .right-side {
-    width: 100%;
-}
-
 section img {
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
-section img.clickable {
-    cursor: pointer;
-    box-shadow: var(--level-2);
-    transition: all 0.5s ease;
+section .hero-content {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-top: -20px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
 }
 
-section img.clickable:active {
-    box-shadow: var(--level-4);
-    transform: scale(1.1);
-    transition: all 0s ease;
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
 }
 
-@media (hover:hover) {
+@media screen and (orientation:portrait) {
+    section {
+        width: 95%;
+    }
 
-    section img.clickable:hover {
-        box-shadow: var(--level-4);
-        transform: scale(1.1);
+    .side-by-side {
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    
+    .side-by-side .left-side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .side-by-side .right-side {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation:landscape) {
     section {
         width: 66%;
     }
 
-    section .side-by-side {
+    .side-by-side {
         display: flex;
         width: 90%;
         margin: 0 auto;
@@ -79,14 +75,60 @@ section img.clickable:active {
         justify-content: center;
         flex-direction: unset;
     }
-
-    section .side-by-side .left-side {
+    
+    .side-by-side .left-side {
+        display: flex;
+        flex-direction: column;
         margin-right: auto;
+        width: 47.5%;
         max-width: 47.5%;
     }
-
-    section .side-by-side .right-side {
+    
+    .side-by-side .right-side {
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
+        width: 47.5%;
         max-width: 47.5%;
     }
 }
+
+/* || Elevated card */
+
+.elevated-card {
+    position: relative;
+    border-radius: 12px;
+    background-color: var(--md-sys-color-surface-container-low);
+    --md-elevation-level: 1;
+}
+
+/* || Clickable image */
+
+.clickable-image {
+    position: relative;
+    display: inline-block;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    --md-elevation-level: 0;
+}
+
+.clickable-image:hover {
+    --md-elevation-level: 1;
+}
+
+.clickable-image:active {
+    --md-elevation-level: 1;
+}
+
+.clickable-image img {
+    display: block;
+    cursor: pointer;
+}
+
+/* || Section buttons */
+
+section md-filled-button {
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 15px;
+  }

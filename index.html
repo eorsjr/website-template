@@ -7,90 +7,168 @@
     <meta name="description" content="An advanced website template designed to be easily personalizable by end users.">
     <title>Website Template</title>
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/custom-elevation-levels.css">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/image-grid.css">
+    <link rel="stylesheet" href="styles/lightbox.css">
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/section.css">
-    <link rel="stylesheet" href="styles/button.css">
     <link rel="stylesheet" href="styles/slideshow.css">
-    <link rel="stylesheet" href="styles/lightbox.css">
-    <link rel="stylesheet" href="styles/image-grid.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme-baseline.css">
+    <link rel="stylesheet" href="styles/theme-blue.css">
+    <link rel="stylesheet" href="styles/theme-green.css">
+    <link rel="stylesheet" href="styles/theme-orange.css">
+    <link rel="stylesheet" href="styles/theme-pink.css">
+    <link rel="stylesheet" href="styles/theme-silver.css">
+    <link rel="stylesheet" href="styles/theme-yellow.css">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Anta&family=Limelight&family=Pattaya&display=swap');
-    </style>
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Anta&family=Limelight&family=Pattaya&display=swap"
+        rel="stylesheet">
+    <script type="importmap">
+        {
+          "imports": {
+            "@material/web/": "https://esm.run/@material/web/"
+          }
+        }
+      </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
 </head>
 
 <body>
     <nav>
-        <div class="navbar">
-            <button class="icon-button home-button active" aria-label="Home" onclick="window.location.href='index.html';"><span
-                    class="material-symbols-outlined">home</span><span class="icon-title">Home</span></button>
-            <button class="icon-button color-scheme-button" aria-label="Switch to Dark Mode"><span
-                    class="material-symbols-outlined">dark_mode</span><span class="icon-title">Toggle</span></button>
-            <button class="icon-button palette-button" aria-label="Toggle Color Palette"><span class="material-symbols-outlined">palette</span><span
-                    class="icon-title">Palette</span></button>
-            <button class="icon-button font-button" aria-label="Toggle Font"><span class="material-symbols-outlined">brand_family</span><span
-                    class="icon-title">Font</span></button>
-            <button class="icon-button menu-button" aria-label="Open Menu"><span class="material-symbols-outlined">menu</span><span
-                    class="icon-title">Menu</span></button>
+        <div class="navigation-bar">
+            <button class="home-button active-indicator" aria-label="Home" onclick="window.location.href='index.html';">
+                <md-icon>
+                    home<md-ripple></md-ripple>
+                </md-icon>
+                <span class="label-text">Home</span>
+            </button>
+            <button class="color-scheme-button" aria-label="Switch to Dark Mode">
+                <md-icon>
+                    dark_mode<md-ripple></md-ripple>
+                </md-icon>
+                <span class="label-text">Toggle</span>
+            </button>
+            <button class="palette-button" aria-label="Toggle Color Palette">
+                <md-icon>
+                    palette<md-ripple></md-ripple>
+                </md-icon>
+                <span class="label-text">Palette</span>
+            </button>
+            <button class="font-button" aria-label="Toggle Font">
+                <md-icon>
+                    brand_family<md-ripple></md-ripple>
+                </md-icon>
+                <span class="label-text">Font</span>
+            </button>
+            <button class="menu-button" aria-label="Open Menu">
+                <md-icon>
+                    menu<md-ripple></md-ripple>
+                </md-icon>
+                <span class="label-text">Menu</span>
+            </button>
         </div>
-        <div class="menu">
-            <div class="links">
-                <a href="#!">Other 1</a>
-                <a href="#!">Other 2</a>
-                <a href="#!">Other 3</a>
-                <a href="#!">Other 4</a>
-                <a href="#!">Other 5</a>
-                <a href="#!">Other 6</a>
-                <a href="#!">Other 7</a>
-                <a href="#!">Other 8</a>
-                <a href="#!">Other 9</a>
-                <a href="#!">Other 10</a>
-                <a href="#!">Other 11</a>
-                <a href="#!">Other 12</a>
-                <a href="#!">Other 13</a>
-                <a href="#!">Other 14</a>
-                <a href="#!">Other 15</a>
-                <a href="#!">Other 16</a>
+        <div class="navigation-drawer">
+            <div class="header">
+                <md-icon-button class="close-menu-button" aria-label="Close Menu">
+                    <md-icon>menu_open</md-icon>
+                </md-icon-button>
             </div>
+            <md-list>
+                <md-list-item class="active-indicator" interactive href="index.html">
+                    Home
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 1
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 2
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 3
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 4
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 5
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 6
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 7
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 8
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 9
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 10
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 11
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 12
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 13
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 14
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 15
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Other 16
+                    <md-ripple></md-ripple>
+                </md-list-item>
+            </md-list>
         </div>
     </nav>
     <main>
         <div class="slideshow-container">
-            <img class="slideshow-image" src="https://placehold.co/160x90" width="160px" height="90px"
-                alt="Template Image 160x90">
-            <img class="slideshow-image" src="https://placehold.co/300x200" width="300px" height="200px"
-                alt="Template Image 300x200">
-            <img class="slideshow-image" src="https://placehold.co/400x300" width="400px" height="300px"
-                alt="Template Image 400x300">
+            <img class="slideshow-image" src="https://placehold.co/1600x900" width="1600px" height="900px"
+                alt="Template Image 1600x900">
+            <img class="slideshow-image" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                alt="Template Image 3000x2000">
+            <img class="slideshow-image" src="https://placehold.co/4000x3000" width="4000px" height="3000px"
+                alt="Template Image 4000x3000">
         </div>
         <h1>Page Heading</h1>
-        <section>
-            <h2>Section Heading</h2>
-            <h3>Subheading</h3>
-            <div class="centered">
-                <div class="image-grid">
-                    <img class="clickable lightbox-target" src="https://placehold.co/400x300" width="400px"
-                        height="300px" onclick="openLightbox()" alt="Template Image 400x300">
-                    <img class="clickable lightbox-target" src="https://placehold.co/400x500" width="400px"
-                        height="500px" onclick="openLightbox()" alt="Template Image 400x500">
-                    <img class="clickable lightbox-target" src="https://placehold.co/300x200" width="300px"
-                        height="200px" onclick="openLightbox()" alt="Template Image 300x200">
-                    <img class="clickable lightbox-target" src="https://placehold.co/160x90" width="160px" height="90px"
-                        onclick="openLightbox()" alt="Template Image 160x90">
-                </div>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare quam.
-                    Rutrum torquent fames pretium sollicitudin habitant aptent lacus conubia. Tincidunt massa consequat
-                    tempus est ridiculus ut. Consequat odio nisi interdum donec tristique natoque. Arcu mi porttitor
-                    mauris platea quisque elementum ultrices. <a href="#!">Torquent curae suspendisse sollicitudin etiam
-                        inceptos.</a>
-                </p>
-            </div>
-            <button class="text-button" onclick="window.location.href='#section2';">Section 2</button>
-        </section>
-        <section id="section2">
+        <section class="elevated-card">
+            <md-elevation></md-elevation>
+            <img class="hero-content" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                alt="Template Image 3000x2000">
             <h2>Section Heading</h2>
             <h3>Subheading</h3>
             <div class="side-by-side">
@@ -115,52 +193,78 @@
                                 <th>Last name</th>
                             </tr>
                             <tr>
-                                <td>John</td>
-                                <td>Doe</td>
+                                <td>John<md-ripple></md-ripple></td>
+                                <td>Doe<md-ripple></md-ripple></td>
                             </tr>
                             <tr>
-                                <td>Jane</td>
-                                <td>Doe</td>
+                                <td>Jane<md-ripple></md-ripple></td>
+                                <td>Doe<md-ripple></md-ripple></td>
                             </tr>
                         </table>
                     </div>
-                    <button class="icon-button" aria-label="Copy Table" onclick="copyTable(this)"><span
-                            class="material-symbols-outlined">content_copy</span><span class="icon-title">Copy
-                            Table</span></button>
+                    <md-filled-button aria-label="Copy Table" onclick="copyTable(this)">
+                        Copy Table
+                        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px">
+                            <path
+                                d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
+                        </svg>
+                    </md-filled-button>
                 </div>
             </div>
+            <md-filled-button interactive href="#section2">Section 2</md-filled-button>
+        </section>
+        <section class="elevated-card" id="section2">
+            <md-elevation></md-elevation>
+            <h2>Section Heading</h2>
             <h3>Subheading</h3>
-            <div class="side-by-side">
-                <div class="left-side">
-                    <img src="https://placehold.co/300x200" width="300px" height="200px" alt="Template Image 300x200">
+            <div class="centered">
+                <div class="image-grid">
+                    <div class="clickable-image">
+                        <img class="lightbox-target" src="https://placehold.co/4000x3000" width="4000px" height="3000px"
+                            onclick="openLightbox()" alt="Template Image 4000x3000">
+                        <md-elevation></md-elevation>
+                    </div>
+                    <div class="clickable-image">
+                        <img class="lightbox-target" src="https://placehold.co/2000x2500" width="2000px" height="2500px"
+                            onclick="openLightbox()" alt="Template Image 2000x2500">
+                        <md-elevation></md-elevation>
+                    </div>
+                    <div class="clickable-image">
+                        <img class="lightbox-target" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                            onclick="openLightbox()" alt="Template Image 3000x2000">
+                        <md-elevation></md-elevation>
+                    </div>
+                    <div class="clickable-image">
+                        <img class="lightbox-target" src="https://placehold.co/1600x900" width="1600px" height="900px"
+                            onclick="openLightbox()" alt="Template Image 1600x900">
+                        <md-elevation></md-elevation>
+                    </div>
                 </div>
-                <div class="right-side">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.
-                    </p>
-                    <ol>
-                        <li>List item 1</li>
-                        <li>List item 2</li>
-                        <li>List item 3</li>
-                    </ol>
-                </div>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare quam.
+                    Rutrum torquent fames pretium sollicitudin habitant aptent lacus conubia. Tincidunt massa consequat
+                    tempus est ridiculus ut. Consequat odio nisi interdum donec tristique natoque. Arcu mi porttitor
+                    mauris platea quisque elementum ultrices. <a href="#!">Torquent curae suspendisse sollicitudin etiam
+                        inceptos.</a>
+                </p>
             </div>
         </section>
     </main>
 
-    <footer>Footer</footer>
+    <footer>
+        <p>Footer</p>
+        <a href="#!">Link</a>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="scripts/toggle-scrolling.js"></script>
-    <script src="scripts/responsive-navigation.js"></script>
-    <script src="scripts/hide-navigation.js"></script>
     <script src="scripts/content-reveal.js"></script>
+    <script src="scripts/copy-table.js"></script>
+    <script src="scripts/hide-navigation-bar.js"></script>
     <script src="scripts/lightbox.js"></script>
     <script src="scripts/slideshow.js"></script>
     <script src="scripts/switch-style.js"></script>
-    <script src="scripts/click-to-copy.js"></script>
+    <script src="scripts/toggle-navigation-drawer.js"></script>
+    <script src="scripts/toggle-scrolling.js"></script>
 </body>
 
 </html>

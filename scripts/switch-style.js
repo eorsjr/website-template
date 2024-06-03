@@ -3,7 +3,7 @@
  */
 
 // Define available themes and fonts
-const themes = ["silver", "green", "yellow", "orange", "pink", "purple", "blue"];
+const themes = ["silver", "green", "yellow", "orange", "pink", "baseline", "blue"];
 const fonts = ["Noto Sans", "Anta", "Limelight", "Pattaya"];
 let themeIndex = 0;
 let fontIndex = 0;
@@ -15,9 +15,7 @@ const elements = {
     "h3": document.getElementsByTagName("h3"),
     "h4": document.getElementsByTagName("h4"),
     "h5": document.getElementsByTagName("h5"),
-    "h6": document.getElementsByTagName("h6"),
-    "button": document.querySelectorAll("button"),
-    "navLinks": document.querySelectorAll("nav .links a")
+    "h6": document.getElementsByTagName("h6")
 };
 
 /**
@@ -71,13 +69,13 @@ function setInitialFont() {
  * Sets the initial color scheme (dark or light) based on the value stored in local storage or system preference.
  */
 function setInitialColorScheme() {
-    const darkThemeLocalStorageValue = getLocalStorage("dark-theme");
+    const darkThemeLocalStorageValue = getLocalStorage("dark");
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
     if (darkThemeLocalStorageValue === "true" || (darkThemeLocalStorageValue === "" && prefersDarkScheme)) {
-        document.body.classList.add('dark-theme');
+        document.body.classList.add('dark');
     } else {
-        document.body.classList.remove('dark-theme');
+        document.body.classList.remove('dark');
     }
 }
 
@@ -106,8 +104,8 @@ function switchFont() {
  * Toggles the color scheme between dark and light mode and updates the local storage.
  */
 function switchColorScheme() {
-    document.body.classList.toggle('dark-theme');
-    setLocalStorage("dark-theme", document.body.classList.contains('dark-theme'));
+    document.body.classList.toggle('dark');
+    setLocalStorage("dark", document.body.classList.contains('dark'));
     toggleSchemeButton();
 }
 
@@ -115,11 +113,9 @@ function switchColorScheme() {
  * Handles changes in the system's color scheme preference and updates the color scheme accordingly.
  */
 function handleColorSchemeChange() {
-    const darkThemeLocalStorageValue = getLocalStorage("dark-theme");
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (darkThemeLocalStorageValue === "") {
-        document.body.classList.toggle('dark-theme', prefersDarkScheme);
-    }
+    document.body.classList.toggle('dark', prefersDarkScheme);
+    setLocalStorage("dark", document.body.classList.contains('dark'));
 }
 
 /**
@@ -128,12 +124,12 @@ function handleColorSchemeChange() {
  * If the current color scheme is light, it updates the button's text and aria-label to indicate switching to dark mode.
  */
 function toggleSchemeButton() {
-    if (document.body.classList.contains('dark-theme')) {
+    if (document.body.classList.contains('dark')) {
         document.querySelector(".color-scheme-button").ariaLabel = "Switch to Light Mode";
-        document.querySelector(".color-scheme-button span").innerText = "light_mode";
+        document.querySelector(".color-scheme-button md-icon").innerHTML = "light_mode<md-ripple></md-ripple>";
     } else {
         document.querySelector(".color-scheme-button").ariaLabel = "Switch to Dark Mode";
-        document.querySelector(".color-scheme-button span").innerText = "dark_mode";
+        document.querySelector(".color-scheme-button md-icon").innerHTML = "dark_mode<md-ripple></md-ripple>";
     }
 }
 

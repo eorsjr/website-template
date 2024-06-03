@@ -88,21 +88,21 @@ for (let i = 0; i < lightboxTargets.length; i++) {
  */
 function appendLightboxHTML() {
     const lightboxHTML = `
-        <div id="lightbox-overlay" class="lightbox-overlay">
-            <button id="close-button" class="icon-button close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <div class="lightbox-content">
-                <button id="previous-button" class="icon-button previous-button" aria-label="Previous" onclick="switchSlide(-1)">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </button>
-                <button id="next-button" class="icon-button next-button" aria-label="Next" onclick="switchSlide(+1)">
-                    <span class="material-symbols-outlined">arrow_forward</span>
-                </button>
-                <img id="lightbox-image" class="lightbox-image">
-                <div id="lightbox-caption" class="lightbox-caption"></div>
-            </div>
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <md-filled-icon-button id="close-button" class="close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
+            <md-icon>close</md-icon>
+        </md-filled-icon-button>
+        <div class="lightbox-content">
+            <md-filled-icon-button id="previous-button" class="previous-button" aria-label="Previous" onclick="switchSlide(-1)">
+                <md-icon>arrow_back</md-icon>
+            </md-filled-icon-button>
+            <md-filled-icon-button id="next-button" class="next-button" aria-label="Next" onclick="switchSlide(+1)">
+                <md-icon>arrow_forward</md-icon>
+            </md-filled-icon-button>
+            <img id="lightbox-image" class="lightbox-image">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
         </div>
+    </div>
     `;
     document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 }

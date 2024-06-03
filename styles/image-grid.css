@@ -1,4 +1,4 @@
-/* || Image grid styles */
+/* || Image grid */
 
 .image-grid {
     display: flex;
@@ -11,14 +11,14 @@
     padding-bottom: 10px;
 }
 
-.image-grid img {
+.image-grid .clickable-image {
     margin: 10px auto;
     flex: 49%;
     max-width: 49%;
 }
 
 @media screen and (orientation:landscape) {
-    .image-grid img {
+    .image-grid .clickable-image {
         flex: 32%;
         max-width: 32%;
     }

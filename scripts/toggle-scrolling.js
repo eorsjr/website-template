@@ -3,8 +3,8 @@
  */
 
 /**
- * Toggles scrolling behavior based on the visibility of overlays such as mobile menus or lightboxes.
- * If either the mobile menu or lightbox is visible, scrolling is disabled.
+ * Toggles scrolling behavior based on the visibility of overlays such as menus or lightboxes.
+ * If either the menu or lightbox is visible, scrolling is disabled.
  * If neither overlay is visible, scrolling is enabled.
  */
 
@@ -12,8 +12,8 @@ let scrollPos = 0;
 
 function toggleScrolling() {
 
-    if (mobileMenuVisible || lightboxVisible) {
-        // If mobile menu or lightbox is visible, disable scrolling
+    if (navigationDrawerVisible || lightboxVisible) {
+        // If menu or lightbox is visible, disable scrolling
         scrollPos = window.scrollY;
         document.body.style.top = "-" + scrollPos + "px"; // Set top to current scroll position
         document.body.style.position = "fixed"; // Fix body position
