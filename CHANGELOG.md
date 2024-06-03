@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.0.1](https://github.com/eorsjr/website-template/compare/v3.0.0...v3.0.1)
+
+> 4 June 2024
+
+- docs: :memo: update changelog [`0f264d2`](https://github.com/eorsjr/website-template/commit/0f264d2f4b62097f5d72507415abc85018202224)
+- fix: :bug: inherit border-radius in md-list from navigation-drawer [`e52c2e3`](https://github.com/eorsjr/website-template/commit/e52c2e3a18483334579863fa1775cb4dbae16a83)
+
 ### [v3.0.0](https://github.com/eorsjr/website-template/compare/v2.2.0...v3.0.0)
 
 > 3 June 2024
