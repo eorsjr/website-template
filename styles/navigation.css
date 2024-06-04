@@ -179,7 +179,14 @@
   }
 
   .navigation-bar button.menu-button {
+    position: absolute;
+    top: 0;
+    margin-top: 12px;
     order: -1;
+  }
+
+  .navigation-bar button.menu-button .label-text{
+    display: none;
   }
 }
 
