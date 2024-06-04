@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.2](https://github.com/eorsjr/website-template/compare/v3.1.1...v3.1.2)
+
+> 4 June 2024
+
+- fix: :bug: correct navbar visibility on scroll and orientation change [`90ae208`](https://github.com/eorsjr/website-template/commit/90ae2086fceea7d1d138092dfac7623811123f71)
+
 #### [v3.1.1](https://github.com/eorsjr/website-template/compare/v3.1.0...v3.1.1)
 
 > 4 June 2024
