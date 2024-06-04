@@ -1,7 +1,3 @@
-/**
- * This code is responsible for hiding/revealing the navigation bar depending on scroll direction.
- */
-
 let prevScrollPos = window.scrollY;
 
 /**
@@ -10,7 +6,6 @@ let prevScrollPos = window.scrollY;
  * and hidden when scrolling down. Adjustments are made based on screen orientation.
  */
 function hideNavigation() {
-
     let currentScrollPos = window.scrollY;
 
     // Check portrait orientation
@@ -22,18 +17,24 @@ function hideNavigation() {
                 document.querySelector(".navigation-bar").style.bottom = "0";
             } else {
                 // Hide the navigation bar when scrolling down
-                document.querySelector(".navigation-bar").style.bottom = "-150px";
+                document.querySelector(".navigation-bar").style.bottom = "-150px"; // Adjust as necessary
             }
         }
-    } else {
-        // Show the navigation bar in landscape
-        document.querySelector(".navigation-bar").style.bottom = "0";
     }
 
     prevScrollPos = currentScrollPos;
 }
 
+/**
+ * Ensures the navigation bar is visible in landscape mode.
+ */
+function handleOrientationOrResize() {
+    if (window.innerHeight < window.innerWidth) {
+        document.querySelector(".navigation-bar").style.bottom = "0";
+    }
+}
+
 // Add event listeners to trigger the hideNavigation function
 window.addEventListener("scroll", hideNavigation);
-window.addEventListener("resize", hideNavigation);
-window.addEventListener("orientationchange", hideNavigation);
+window.addEventListener("resize", handleOrientationOrResize);
+window.addEventListener("orientationchange", handleOrientationOrResize);
