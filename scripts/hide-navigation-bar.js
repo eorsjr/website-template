@@ -13,8 +13,8 @@ function hideNavigation() {
 
     let currentScrollPos = window.scrollY;
 
-    // Check if the navigation drawer is not displayed (in portrait mode on mobile)
-    if($(".navigation-drawer").css("display") === "none" && window.innerHeight > window.innerWidth) {
+    // Check portrait orientation
+    if (window.innerHeight > window.innerWidth) {
         if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
             // Show the navigation bar when scrolling up or at the top of the page
             document.querySelector(".navigation-bar").style.bottom = "0";
@@ -22,10 +22,15 @@ function hideNavigation() {
             // Hide the navigation bar when scrolling down
             document.querySelector(".navigation-bar").style.bottom = "-150px";
         }
+    } else {
+        // Show the navigation bar in landscape
+        document.querySelector(".navigation-bar").style.bottom = "0";
     }
 
     prevScrollPos = currentScrollPos;
 }
 
-// Add an event listener for the scroll event to trigger the hideNavigation function
+// Add event listeners to trigger the hideNavigation function
 window.addEventListener("scroll", hideNavigation);
+window.addEventListener("resize", hideNavigation);
+window.addEventListener("orientationchange", hideNavigation);
