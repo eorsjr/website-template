@@ -15,12 +15,15 @@ function hideNavigation() {
 
     // Check portrait orientation
     if (window.innerHeight > window.innerWidth) {
-        if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
-            // Show the navigation bar when scrolling up or at the top of the page
-            document.querySelector(".navigation-bar").style.bottom = "0";
-        } else {
-            // Hide the navigation bar when scrolling down
-            document.querySelector(".navigation-bar").style.bottom = "-150px";
+        // Check if navigation drawer is not visible
+        if ($(".navigation-drawer").css("display") === "none") {
+            if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
+                // Show the navigation bar when scrolling up or at the top of the page
+                document.querySelector(".navigation-bar").style.bottom = "0";
+            } else {
+                // Hide the navigation bar when scrolling down
+                document.querySelector(".navigation-bar").style.bottom = "-150px";
+            }
         }
     } else {
         // Show the navigation bar in landscape
