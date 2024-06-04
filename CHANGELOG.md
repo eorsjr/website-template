@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.0](https://github.com/eorsjr/website-template/compare/v3.0.1...v3.1.0)
+
+> 4 June 2024
+
+- fix: :bug: adjust navigation bar layout [`950eed9`](https://github.com/eorsjr/website-template/commit/950eed991c6a5b04f3f39ab6cc5f283e6594f17e)
+- feat: :lipstick: adjust menu-button in portrait [`47d68bb`](https://github.com/eorsjr/website-template/commit/47d68bbf647a04570a8fa76bee3f27db60fd2560)
+- docs: :memo: update changelog [`b229c12`](https://github.com/eorsjr/website-template/commit/b229c122de5c7e2fc1fa67e39a82c6269baa719b)
+
 #### [v3.0.1](https://github.com/eorsjr/website-template/compare/v3.0.0...v3.0.1)
 
 > 4 June 2024
