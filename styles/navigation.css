@@ -106,7 +106,6 @@
   }
 
   .navigation-bar {
-    justify-content: center;
     flex-direction: column;
     height: 100%;
     min-width: 80px;
@@ -179,8 +178,7 @@
   }
 
   .navigation-bar button.menu-button {
-    position: absolute;
-    top: 0;
+    height: 32px;
     margin-top: 12px;
     order: -1;
   }
