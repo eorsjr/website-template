@@ -21,27 +21,6 @@ function toggleMenuButton() {
 }
 
 /**
- * Creates and displays the overlay element.
- * Applies a blur effect for visual appeal and changes the background color.
- * 
- * @function createOverlay
- */
-function createOverlay() {
-    const scrim = document.createElement('div');
-    scrim.id = 'scrim';
-    scrim.setAttribute('aria-label', 'Close Menu');
-    scrim.setAttribute('tabindex', '0');
-    document.body.appendChild(scrim);
-    scrim.style.display = 'block';
-    setTimeout(() => {
-        scrim.style.backdropFilter = 'blur(20px)';
-        scrim.style.webkitBackdropFilter = 'blur(20px)';
-        scrim.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-    }, 1);
-    document.querySelector("#scrim").addEventListener("click", toggleNavigation);
-}
-
-/**
  * Animates and displays the navigation drawer.
  * 
  * @function showNavigationDrawer
@@ -66,23 +45,6 @@ function hideNavigationDrawer() {
 }
 
 /**
- * Removes the overlay element from the DOM.
- * 
- * @function removeOverlay
- */
-function removeOverlay() {
-    const scrim = document.getElementById('scrim');
-    if (scrim) {
-        scrim.style.backdropFilter = 'blur(0px)';
-        scrim.style.webkitBackdropFilter = 'blur(0px)';
-        scrim.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-        setTimeout(() => {
-            scrim.remove();
-        }, 300);
-    }
-}
-
-/**
  * Toggles the visibility of the navigation drawer.
  * 
  * When invoked, this function toggles the visibility of the navigation drawer,
@@ -96,11 +58,16 @@ function toggleNavigation() {
     navigationDrawerVisible = !navigationDrawerVisible;
 
     if (navigationDrawerVisible) {
-        createOverlay();
+        createScrim();
+        const scrim = document.getElementById("scrim");
+        scrim.addEventListener("click", toggleNavigation);
+        scrim.setAttribute('aria-label', 'Close Menu');
+        scrim.setAttribute('tabindex', '0');
+        scrim.style.cursor = "pointer";
         showNavigationDrawer();
     } else {
         hideNavigationDrawer();
-        removeOverlay();
+        removeScrim();
     }
 
     toggleScrolling();
