@@ -5,21 +5,23 @@
 let lightboxVisible = false;
 
 /**
- * Opens the lightbox by fading in the overlay and enabling the lightbox mode.
+ * Opens the lightbox by fading in the scrim and enabling the lightbox mode.
  * Also disables page scrolling.
  */
 function openLightbox() {
-    $("#lightbox-overlay").fadeIn();
+    createScrim();
+    $(".lightbox").css("display", "flex").hide().fadeIn(300);
     lightboxVisible = true;
     toggleScrolling();
 }
 
 /**
- * Closes the lightbox by fading out the overlay and disabling the lightbox mode.
+ * Closes the lightbox by fading out the scrim and disabling the lightbox mode.
  * Also enables page scrolling.
  */
 function closeLightbox() {
-    $("#lightbox-overlay").fadeOut();
+    removeScrim();
+    $(".lightbox").fadeOut(300);
     lightboxVisible = false;
     toggleScrolling();
 }
@@ -88,20 +90,18 @@ for (let i = 0; i < lightboxTargets.length; i++) {
  */
 function appendLightboxHTML() {
     const lightboxHTML = `
-    <div id="lightbox-overlay" class="lightbox-overlay">
-        <md-filled-icon-button id="close-button" class="close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
+    <div class="lightbox">
+        <md-filled-icon-button id="close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
             <md-icon>close</md-icon>
         </md-filled-icon-button>
-        <div class="lightbox-content">
-            <md-filled-icon-button id="previous-button" class="previous-button" aria-label="Previous" onclick="switchSlide(-1)">
-                <md-icon>arrow_back</md-icon>
-            </md-filled-icon-button>
-            <md-filled-icon-button id="next-button" class="next-button" aria-label="Next" onclick="switchSlide(+1)">
-                <md-icon>arrow_forward</md-icon>
-            </md-filled-icon-button>
-            <img id="lightbox-image" class="lightbox-image">
-            <div id="lightbox-caption" class="lightbox-caption"></div>
-        </div>
+        <md-filled-icon-button id="previous-button" aria-label="Previous" onclick="switchSlide(-1)">
+            <md-icon>arrow_back</md-icon>
+        </md-filled-icon-button>
+        <md-filled-icon-button id="next-button" aria-label="Next" onclick="switchSlide(+1)">
+            <md-icon>arrow_forward</md-icon>
+        </md-filled-icon-button>
+        <img id="lightbox-image">
+        <div id="lightbox-caption"></div>
     </div>
     `;
     document.body.insertAdjacentHTML('beforeend', lightboxHTML);

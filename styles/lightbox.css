@@ -1,63 +1,42 @@
 /* || Lightbox */
 
-.lightbox-overlay {
-    z-index: 3;
-    position: fixed;
+.lightbox {
     display: none;
-    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
     height: 100vh;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    color: white;
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
 }
 
-.lightbox-content {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.lightbox-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#lightbox-image {
     max-height: 66vh;
     max-width: 100vw;
 }
 
-.lightbox-caption {
-    position: fixed;
-    width: 100%;
-    height: 50px;
+#lightbox-caption {
     text-align: center;
     padding: 10px 0;
-    height: 150px;
 }
 
 /* || Lightbox buttons */
 
-.lightbox-overlay .close-button {
-    position: fixed;
+.lightbox #close-button {
+    position: absolute;
     top: 24px;
     right: 24px;
 }
 
-.lightbox-overlay .previous-button {
+.lightbox #previous-button {
     position: absolute;
-    top: 50%;
     left: 24px;
-    transform: translateY(-50%);
 }
 
-.lightbox-overlay .next-button {
-    position: fixed;
-    top: 50%;
+.lightbox #next-button {
+    position: absolute;
     right: 24px;
-    transform: translateY(-50%);
 }
