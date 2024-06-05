@@ -5,7 +5,7 @@ let prevScrollPos = window.scrollY;
  * The navigation bar is shown when scrolling up or at the top of the page,
  * and hidden when scrolling down. Adjustments are made based on screen orientation.
  */
-function hideNavigation() {
+function hideNavigationBar() {
     let currentScrollPos = window.scrollY;
 
     // Check portrait orientation
@@ -35,6 +35,6 @@ function handleOrientationOrResize() {
 }
 
 // Add event listeners to trigger the hideNavigation function
-window.addEventListener("scroll", hideNavigation);
+window.addEventListener("scroll", hideNavigationBar);
 window.addEventListener("resize", handleOrientationOrResize);
 window.addEventListener("orientationchange", handleOrientationOrResize);
