@@ -10,8 +10,8 @@ function hideNavigationBar() {
 
     // Check portrait orientation
     if (window.innerHeight > window.innerWidth) {
-        // Check if navigation drawer is not visible
-        if ($(".navigation-drawer").css("display") === "none") {
+        // Check if navigation drawer and lightbox are not visible
+        if ($(".navigation-drawer").css("display") === "none" && $(".lightbox").css("display") === "none") {
             if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
                 // Show the navigation bar when scrolling up or at the top of the page
                 document.querySelector(".navigation-bar").style.bottom = "0";
