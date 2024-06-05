@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.2.0](https://github.com/eorsjr/website-template/compare/v3.1.3...v3.2.0)
+
+> 5 June 2024
+
+- feat: :lipstick: update lightbox [`c7ae956`](https://github.com/eorsjr/website-template/commit/c7ae95669a81adf4ee4176bbb11e2de3e02ba524)
+- fix: :bug: add lightbox visibility check to hideNavigationBar [`e57837c`](https://github.com/eorsjr/website-template/commit/e57837c75120e701bdac1293e43cac925663de81)
+
 #### [v3.1.3](https://github.com/eorsjr/website-template/compare/v3.1.2...v3.1.3)
 
 > 5 June 2024
