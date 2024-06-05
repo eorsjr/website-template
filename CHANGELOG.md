@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v3.1.3](https://github.com/eorsjr/website-template/compare/v3.1.2...v3.1.3)
+
+> 5 June 2024
+
+- fix: :bug: correct footer margin in standalone mode [`67e7ea1`](https://github.com/eorsjr/website-template/commit/67e7ea15fa8e062e46ade95093260f73fc16527e)
+
 #### [v3.1.2](https://github.com/eorsjr/website-template/compare/v3.1.1...v3.1.2)
 
 > 4 June 2024
