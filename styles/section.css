@@ -35,10 +35,22 @@ section .hero-content {
     width: 90%;
 }
 
-@media screen and (orientation:portrait) {
+/* For compact and medium window classes */
+@media (max-width: 839px) {
     section {
         width: 95%;
     }
+}
+
+/* For expanded, large and extra-large window classes */
+@media (min-width: 840px) {
+    section {
+        width: 66%;
+    }
+}
+
+/* For compact, medium and expanded window classes */
+@media (max-width: 1199px) {
 
     .side-by-side {
         display: flex;
@@ -62,10 +74,8 @@ section .hero-content {
     }
 }
 
-@media screen and (orientation:landscape) {
-    section {
-        width: 66%;
-    }
+/* For large and extra-large window classes */
+@media (min-width:1200px) {
 
     .side-by-side {
         display: flex;

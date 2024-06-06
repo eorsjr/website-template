@@ -13,11 +13,18 @@
 
 .image-grid .clickable-image {
     margin: 10px auto;
-    flex: 49%;
-    max-width: 49%;
 }
 
-@media screen and (orientation:landscape) {
+/* For compact, medium and expanded window classes */
+@media (max-width:1199px) {
+    .image-grid .clickable-image {
+        flex: 49%;
+        max-width: 49%;
+    }
+}
+
+/* For large and extra-large window classes */
+@media (min-width:1200px) {
     .image-grid .clickable-image {
         flex: 32%;
         max-width: 32%;

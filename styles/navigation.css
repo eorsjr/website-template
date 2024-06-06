@@ -57,7 +57,11 @@
   color: var(--md-sys-color-on-secondary-container);
 }
 
-@media screen and (orientation:portrait) {
+/* For compact window class */
+@media (max-width: 599px) {
+  footer {
+    margin-bottom: 80px;
+  }
 
   .navigation-component {
     height: 80px;
@@ -74,19 +78,18 @@
     width: 320px;
   }
 }
-
-@media all and (orientation:portrait) and (display-mode:standalone) {
-
+/* For compact window class and standalone mode */
+@media all and (max-width: 599px) and (display-mode:standalone) {
   .navigation-component {
     height: auto;
     min-height: 80px;
     padding-top: 4px;
     padding-bottom: calc(env(safe-area-inset-bottom));
   }
-
 }
 
-@media screen and (orientation:landscape) {
+/* For medium, expaned, large and extra-large window classes */
+@media (min-width: 600px) {
 
   main,
   footer {
@@ -146,14 +149,16 @@
   color: var(--md-sys-color-on-secondary-container);
 }
 
-@media screen and (orientation: portrait) {
+/* For compact window class */
+@media (max-width: 599px) {
 
   .navigation-component button md-icon {
     width: 64px;
   }
 }
 
-@media screen and (orientation:landscape) {
+/* For medium, expaned, large and extra-large window classes */
+@media (min-width: 600px) {
   .navigation-component button {
     height: 56px;
     margin-left: 12px;
@@ -171,7 +176,7 @@
     order: -1;
   }
 
-  .navigation-component button.menu-button .label-text{
+  .navigation-component button.menu-button .label-text {
     display: none;
   }
 }

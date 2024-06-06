@@ -3,13 +3,13 @@ let prevScrollPos = window.scrollY;
 /**
  * Hides or reveals the navigation component based on the scroll direction.
  * The navigation component is shown when scrolling up or at the top of the page,
- * and hidden when scrolling down. Adjustments are made based on screen orientation.
+ * and hidden when scrolling down. Adjustments are made based on window size.
  */
 function hideNavComponent() {
     let currentScrollPos = window.scrollY;
 
-    // Check portrait orientation
-    if (window.innerHeight > window.innerWidth) {
+    // Check compact window class
+    if (window.innerWidth < 600) {
         // Check if navigation drawer and lightbox are not visible
         if ($(".navigation-drawer").css("display") === "none" && $(".lightbox").css("display") === "none") {
             if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
@@ -26,10 +26,10 @@ function hideNavComponent() {
 }
 
 /**
- * Ensures the navigation component is visible in landscape mode.
+ * Ensures the navigation component is visible for medium, expanded, large and extra-large window class
  */
 function handleOrientationOrResize() {
-    if (window.innerHeight < window.innerWidth) {
+    if (window.innerWidth >= 600) {
         document.querySelector(".navigation-component").style.bottom = "0";
     }
 }

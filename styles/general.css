@@ -97,18 +97,6 @@ footer {
     padding-bottom: 20px;
 }
 
-@media screen and (orientation: portrait) {
-    footer {
-        margin-bottom: calc(80px + env(safe-area-inset-bottom));
-    }
-}
-
-@media all and (orientation: portrait) and (display-mode:standalone) {
-    footer {
-        margin-bottom: calc(80px);
-    }
-}
-
 /* || Table */
 
 .table-container {
