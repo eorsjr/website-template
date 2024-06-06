@@ -1,6 +1,6 @@
 /* || Navigation */
 
-.navigation-bar {
+.navigation-component {
   display: flex;
   position: fixed;
   z-index: 1;
@@ -59,7 +59,7 @@
 
 @media screen and (orientation:portrait) {
 
-  .navigation-bar {
+  .navigation-component {
     height: 80px;
     width: 100%;
     bottom: 0;
@@ -77,7 +77,7 @@
 
 @media all and (orientation:portrait) and (display-mode:standalone) {
 
-  .navigation-bar {
+  .navigation-component {
     height: auto;
     min-height: 80px;
     padding-top: 4px;
@@ -93,7 +93,7 @@
     padding-left: 80px;
   }
 
-  .navigation-bar {
+  .navigation-component {
     flex-direction: column;
     height: 100%;
     min-width: 80px;
@@ -107,7 +107,7 @@
 
 /* || Navigation buttons */
 
-.navigation-bar button {
+.navigation-component button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +115,7 @@
   background: none;
 }
 
-.navigation-bar button .label-text {
+.navigation-component button .label-text {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -123,12 +123,12 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-.navigation-bar button.active-indicator .label-text {
+.navigation-component button.active-indicator .label-text {
   font-weight: 700;
   color: var(--md-sys-color-on-surface);
 }
 
-.navigation-bar button md-icon {
+.navigation-component button md-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +139,7 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-.navigation-bar button.active-indicator md-icon {
+.navigation-component button.active-indicator md-icon {
   font-variation-settings:
     'FILL' 1;
   background-color: var(--md-sys-color-secondary-container);
@@ -148,40 +148,40 @@
 
 @media screen and (orientation: portrait) {
 
-  .navigation-bar button md-icon {
+  .navigation-component button md-icon {
     width: 64px;
   }
 }
 
 @media screen and (orientation:landscape) {
-  .navigation-bar button {
+  .navigation-component button {
     height: 56px;
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 12px;
   }
 
-  .navigation-bar button md-icon {
+  .navigation-component button md-icon {
     width: 56px;
   }
 
-  .navigation-bar button.menu-button {
+  .navigation-component button.menu-button {
     height: 32px;
     margin-top: 12px;
     order: -1;
   }
 
-  .navigation-bar button.menu-button .label-text{
+  .navigation-component button.menu-button .label-text{
     display: none;
   }
 }
 
 @media (hover:hover) {
-  .navigation-bar button:hover .label-text {
+  .navigation-component button:hover .label-text {
     color: var(--md-sys-color-on-surface);
   }
 }
 
-.navigation-bar button:active .label-text {
+.navigation-component button:active .label-text {
   color: var(--md-sys-color-on-surface);
 }
