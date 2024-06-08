@@ -1,0 +1,43 @@
+/* || Top App Bar */
+
+.top-app-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    padding-left: calc(16px + env(safe-area-inset-left));
+    padding-right: calc(16px + env(safe-area-inset-right));
+    background-color: var(--md-sys-color-surface-container);
+    transition: --md-elevation-level 250ms ease-in-out, top 0.5s ease;
+}
+
+.top-app-bar #menu-button md-icon {
+    color: var(--md-sys-color-on-surface);
+}
+
+.top-app-bar #headline {
+    padding-left: 16px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: var(--md-sys-color-on-surface);
+}
+
+.top-app-bar #trailing-icons {
+    display: flex;
+    margin-left: auto;
+}
+
+.top-app-bar #trailing-icons md-icon-button {
+    margin-left: 24px;
+}
+
+.top-app-bar #trailing-icons md-icon {
+    color: var(--md-sys-color-on-surface-variant);
+}

@@ -10,6 +10,7 @@ let lightboxVisible = false;
  */
 function openLightbox() {
     createScrim();
+    scrim.style.zIndex = 3;
     $(".lightbox").css("display", "flex").hide().fadeIn(300);
     lightboxVisible = true;
     toggleScrolling();

@@ -125,11 +125,11 @@ function handleColorSchemeChange() {
  */
 function toggleSchemeButton() {
     if (document.body.classList.contains('dark')) {
-        document.querySelector(".color-scheme-button").ariaLabel = "Switch to Light Mode";
-        document.querySelector(".color-scheme-button md-icon").innerHTML = "light_mode<md-ripple></md-ripple>";
+        document.getElementById("color-scheme-button").ariaLabel = "Switch to Light Mode";
+        document.querySelector("#color-scheme-button md-icon").innerHTML = "light_mode";
     } else {
-        document.querySelector(".color-scheme-button").ariaLabel = "Switch to Dark Mode";
-        document.querySelector(".color-scheme-button md-icon").innerHTML = "dark_mode<md-ripple></md-ripple>";
+        document.getElementById("color-scheme-button").ariaLabel = "Switch to Dark Mode";
+        document.querySelector("#color-scheme-button md-icon").innerHTML = "dark_mode";
     }
 }
 
@@ -140,7 +140,7 @@ setInitialColorScheme();
 toggleSchemeButton();
 
 // Add event listeners for user interactions and system changes
-document.querySelector(".palette-button").addEventListener("click", switchTheme);
-document.querySelector(".font-button").addEventListener("click", switchFont);
-document.querySelector(".color-scheme-button").addEventListener("click", switchColorScheme);
+document.getElementById("palette-button").addEventListener("click", switchTheme);
+document.getElementById("font-button").addEventListener("click", switchFont);
+document.getElementById("color-scheme-button").addEventListener("click", switchColorScheme);
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", handleColorSchemeChange);

@@ -2,7 +2,7 @@
  * This code is responsible for hiding/revealing the navigation drawer.
  */
 
-let navigationDrawer = document.querySelector(".navigation-drawer");
+const navigationDrawer = document.querySelector(".navigation-drawer");
 let navigationDrawerVisible = false;
 
 /**
@@ -12,11 +12,11 @@ let navigationDrawerVisible = false;
  */
 function toggleMenuButton() {
     if (navigationDrawerVisible) {
-        document.querySelector(".menu-button").ariaLabel = "Close Menu";
-        document.querySelector(".menu-button md-icon").innerHTML = "menu_open<md-ripple></md-ripple>";
+        document.getElementById("menu-button").ariaLabel = "Close Menu";
+        document.querySelector("#menu-button md-icon").innerHTML = "menu_open";
     } else {
-        document.querySelector(".menu-button").ariaLabel = "Open Menu";
-        document.querySelector(".menu-button md-icon").innerHTML = "menu<md-ripple></md-ripple>";
+        document.getElementById("menu-button").ariaLabel = "Open Menu";
+        document.querySelector("#menu-button md-icon").innerHTML = "menu";
     }
 }
 
@@ -64,6 +64,7 @@ function toggleNavigation() {
         scrim.setAttribute('aria-label', 'Close Menu');
         scrim.setAttribute('tabindex', '0');
         scrim.style.cursor = "pointer";
+        scrim.style.zIndex = 1;
         showNavigationDrawer();
     } else {
         hideNavigationDrawer();
@@ -75,8 +76,7 @@ function toggleNavigation() {
 }
 
 // Event listener for menu button click to toggle the navigation drawer
-document.querySelector(".menu-button").addEventListener("click", toggleNavigation);
-document.querySelector(".close-menu-button").addEventListener("click", toggleNavigation);
+document.getElementById("menu-button").addEventListener("click", toggleNavigation);
 
 // Event listeners for window resize to update button text
 window.addEventListener("resize", toggleMenuButton);

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="styles/theme-pink.css">
     <link rel="stylesheet" href="styles/theme-silver.css">
     <link rel="stylesheet" href="styles/theme-yellow.css">
+    <link rel="stylesheet" href="styles/top-app-bar.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,48 +45,87 @@
 </head>
 
 <body>
+    <header class="top-app-bar">
+        <md-elevation></md-elevation>
+        <md-icon-button id="menu-button" aria-label="Open Menu">
+            <md-icon>
+                menu
+            </md-icon>
+        </md-icon-button>
+        <div id="headline">Headline</div>
+        <div id="trailing-icons">
+            <md-icon-button id="color-scheme-button" aria-label="Switch to Dark Mode">
+                <md-icon>
+                    dark_mode
+                </md-icon>
+            </md-icon-button>
+            <md-icon-button id="palette-button" aria-label="Toggle Color Palette">
+                <md-icon>
+                    palette
+                </md-icon>
+            </md-icon-button>
+            <md-icon-button id="font-button" aria-label="Toggle Font">
+                <md-icon>
+                    brand_family
+                </md-icon>
+            </md-icon-button>
+        </div>
+    </header>
     <nav>
         <div class="navigation-component">
-            <button class="home-button active-indicator" aria-label="Home" onclick="window.location.href='index.html';">
+            <md-elevation></md-elevation>
+            <button class="active-indicator" aria-label="Home" onclick="window.location.href='#';">
                 <md-icon>
                     home<md-ripple></md-ripple>
                 </md-icon>
                 <span class="label-text">Home</span>
             </button>
-            <button class="color-scheme-button" aria-label="Switch to Dark Mode">
+            <button aria-label="About">
                 <md-icon>
-                    dark_mode<md-ripple></md-ripple>
+                    person<md-ripple></md-ripple>
                 </md-icon>
-                <span class="label-text">Toggle</span>
+                <span class="label-text">About</span>
             </button>
-            <button class="palette-button" aria-label="Toggle Color Palette">
+            <button aria-label="Gallery">
                 <md-icon>
-                    palette<md-ripple></md-ripple>
+                    photo<md-ripple></md-ripple>
                 </md-icon>
-                <span class="label-text">Palette</span>
+                <span class="label-text">Gallery</span>
             </button>
-            <button class="font-button" aria-label="Toggle Font">
+            <button aria-label="BLog">
                 <md-icon>
-                    brand_family<md-ripple></md-ripple>
+                    newspaper<md-ripple></md-ripple>
                 </md-icon>
-                <span class="label-text">Font</span>
+                <span class="label-text">Blog</span>
             </button>
-            <button class="menu-button" aria-label="Open Menu">
+            <button aria-label="Contact">
                 <md-icon>
-                    menu<md-ripple></md-ripple>
+                    contact_page<md-ripple></md-ripple>
                 </md-icon>
-                <span class="label-text">Menu</span>
+                <span class="label-text">Contact</span>
             </button>
         </div>
         <div class="navigation-drawer">
-            <div class="header">
-                <md-icon-button class="close-menu-button" aria-label="Close Menu">
-                    <md-icon>menu_open</md-icon>
-                </md-icon-button>
-            </div>
+            <md-elevation></md-elevation>
             <md-list>
                 <md-list-item class="active-indicator" interactive href="index.html">
                     Home
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    About
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Gallery
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Blog
+                    <md-ripple></md-ripple>
+                </md-list-item>
+                <md-list-item>
+                    Contact
                     <md-ripple></md-ripple>
                 </md-list-item>
                 <md-list-item>
@@ -126,30 +166,6 @@
                 </md-list-item>
                 <md-list-item>
                     Other 10
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 11
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 12
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 13
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 14
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 15
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 16
                     <md-ripple></md-ripple>
                 </md-list-item>
             </md-list>
@@ -259,7 +275,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/content-reveal.js"></script>
     <script src="scripts/copy-table.js"></script>
-    <script src="scripts/hide-nav-component.js"></script>
+    <script src="scripts/elevation.js"></script>
+    <script src="scripts/hide-on-scroll.js"></script>
     <script src="scripts/lightbox.js"></script>
     <script src="scripts/slideshow.js"></script>
     <script src="scripts/switch-style.js"></script>

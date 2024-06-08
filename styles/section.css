@@ -117,9 +117,8 @@ section .hero-content {
 .clickable-image {
     position: relative;
     display: inline-block;
-    transition-duration: 250ms;
-    transition-timing-function: ease-in-out;
     --md-elevation-level: 0;
+    transition: --md-elevation-level 250ms ease-in-out;
 }
 
 .clickable-image:hover {

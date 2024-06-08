@@ -7,16 +7,16 @@
   /* Initially hidden */
   flex-direction: column;
   position: fixed;
-  z-index: 3;
-  height: 100%;
-  top: 0;
+  z-index: 2;
+  height: calc(100% - 64px);
+  top: 64px;
   left: 0;
   padding-bottom: env(safe-area-inset-bottom);
   transform: translateX(-100%);
   background-color: var(--md-sys-color-surface-container-low);
   transition: width 1s ease, transform 0.3s ease-in-out;
   border-radius: 0 16px 16px 0;
-  box-shadow: var(--level-1);
+  --md-elevation-level: 1;
 }
 
 .navigation-drawer.show {
@@ -29,16 +29,6 @@
   overflow-y: scroll;
   border-radius: inherit;
   background-color: inherit;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  height: 80px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .navigation-drawer md-list-item {
@@ -54,16 +44,12 @@
 
 /* For compact window class */
 @media (max-width: 599px) {
-  footer {
-    margin-bottom: 80px;
-  }
-
   .navigation-drawer {
     width: 320px;
   }
 }
 
-/* For medium, expaned, large and extra-large window classes */
+/* For medium, expanded, large and extra-large window classes */
 @media (min-width: 600px) {
   .navigation-drawer {
     width: 360px;
@@ -82,10 +68,6 @@
 
 /* For compact window class */
 @media (max-width: 599px) {
-  footer {
-    margin-bottom: 80px;
-  }
-
   .navigation-component {
     height: 80px;
     width: 100%;
@@ -94,31 +76,32 @@
     padding-bottom: 16px;
     justify-content: space-evenly;
     transition: bottom 0.5s ease;
-    box-shadow: var(--level-2);
+    --md-elevation-level: 2;
+  }
+
+  /* For standalone mode */
+  @media (display-mode:standalone) {
+    .navigation-component {
+      height: auto;
+      min-height: 80px;
+      padding-top: 4px;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
   }
 }
 
-/* For compact window class and standalone mode */
-@media all and (max-width: 599px) and (display-mode:standalone) {
-  .navigation-component {
-    height: auto;
-    min-height: 80px;
-    padding-top: 4px;
-    padding-bottom: calc(env(safe-area-inset-bottom));
-  }
-}
-
-/* For medium, expaned, large and extra-large window classes */
+/* For medium, expanded, large and extra-large window classes */
 @media (min-width: 600px) {
-  main,
-  footer {
-    padding-left: 80px;
-  }
 
   .navigation-component {
     flex-direction: column;
+    /* justify-content: center; */
     height: 100%;
     min-width: 80px;
+    top: 0;
+    padding-top: calc(64px + 12px);
+    padding-left: env(safe-area-inset-left);
+    overflow: scroll;
   }
 }
 
@@ -171,7 +154,7 @@
   }
 }
 
-/* For medium, expaned, large and extra-large window classes */
+/* For medium, expanded, large and extra-large window classes */
 @media (min-width: 600px) {
   .navigation-component button {
     height: 56px;
@@ -182,16 +165,6 @@
 
   .navigation-component button md-icon {
     width: 56px;
-  }
-
-  .navigation-component button.menu-button {
-    height: 32px;
-    margin-top: 12px;
-    order: -1;
-  }
-
-  .navigation-component button.menu-button .label-text {
-    display: none;
   }
 }
 
