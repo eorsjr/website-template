@@ -140,7 +140,16 @@ setInitialColorScheme();
 toggleSchemeButton();
 
 // Add event listeners for user interactions and system changes
-document.getElementById("palette-button").addEventListener("click", switchTheme);
+document.getElementById("palette-button").addEventListener("click", () => {
+    switchTheme();
+    updateThemeColor();
+});
+document.getElementById("color-scheme-button").addEventListener("click", () => {
+    switchColorScheme();
+    updateThemeColor();
+});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", () => {
+    handleColorSchemeChange();
+    updateThemeColor();
+});
 document.getElementById("font-button").addEventListener("click", switchFont);
-document.getElementById("color-scheme-button").addEventListener("click", switchColorScheme);
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", handleColorSchemeChange);
