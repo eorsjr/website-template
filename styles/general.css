@@ -13,6 +13,7 @@ html {
 
 body {
     margin: 0 auto;
+    width: 100%;
     line-height: 150%;
     background-color: var(--md-sys-color-background);
     color: var(--md-sys-color-on-background);
