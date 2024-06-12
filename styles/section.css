@@ -60,13 +60,13 @@ section .hero-content {
         flex-direction: column;
         padding-bottom: 20px;
     }
-    
+
     .side-by-side .left-side {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-    
+
     .side-by-side .right-side {
         display: flex;
         flex-direction: column;
@@ -85,7 +85,7 @@ section .hero-content {
         justify-content: center;
         flex-direction: unset;
     }
-    
+
     .side-by-side .left-side {
         display: flex;
         flex-direction: column;
@@ -93,7 +93,7 @@ section .hero-content {
         width: 47.5%;
         max-width: 47.5%;
     }
-    
+
     .side-by-side .right-side {
         display: flex;
         flex-direction: column;
@@ -121,12 +121,15 @@ section .hero-content {
     transition: --md-elevation-level 250ms ease-in-out;
 }
 
-.clickable-image:hover {
-    --md-elevation-level: 1;
-}
-
 .clickable-image:active {
     --md-elevation-level: 1;
+    transition: --md-elevation-level 0s ease-in-out;
+}
+
+@media (hover:hover) {
+    .clickable-image:hover {
+        --md-elevation-level: 1;
+    }
 }
 
 .clickable-image img {
@@ -140,4 +143,4 @@ section md-filled-button {
     width: fit-content;
     align-self: center;
     margin-bottom: 15px;
-  }
+}
