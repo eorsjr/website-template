@@ -29,19 +29,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Anta&family=Limelight&family=Pattaya&display=swap"
         rel="stylesheet">
-    <script type="importmap">
-        {
-          "imports": {
-            "@material/web/": "https://esm.run/@material/web/"
-          }
-        }
-      </script>
-    <script type="module">
-        import '@material/web/all.js';
-        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
-
-        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
 </head>
 
 <body>
@@ -172,87 +159,87 @@
         </div>
     </nav>
     <div class="pane">
-    <main>
-        <div class="slideshow-container">
-            <img class="slideshow-image" src="https://placehold.co/1600x900" width="1600px" height="900px"
-                alt="Template Image 1600x900">
-            <img class="slideshow-image" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
-                alt="Template Image 3000x2000">
-            <img class="slideshow-image" src="https://placehold.co/4000x3000" width="4000px" height="3000px"
-                alt="Template Image 4000x3000">
-        </div>
-        <h1>Page Heading</h1>
-        <section class="elevated-card">
-            <md-elevation></md-elevation>
-            <img class="hero-content" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
-                alt="Template Image 3000x2000">
-            <h2>Section Heading</h2>
-            <h3>Subheading</h3>
-            <div class="side-by-side">
-                <div class="left-side">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                    <ul>
-                        <li>List item 1</li>
-                        <li>List item 2</li>
-                        <li>List item 3</li>
-                    </ul>
-                </div>
-                <div class="right-side">
-                    <div class="table-container">
-                        <table>
-                            <th colspan="100%">Name</th>
-                            <tr>
-                                <th>First name</th>
-                                <th>Last name</th>
-                            </tr>
-                            <tr>
-                                <td>John<md-ripple></md-ripple></td>
-                                <td>Doe<md-ripple></md-ripple></td>
-                            </tr>
-                            <tr>
-                                <td>Jane<md-ripple></md-ripple></td>
-                                <td>Doe<md-ripple></md-ripple></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <md-filled-button aria-label="Copy Table" onclick="copyTable(this)">
-                        Copy Table
-                        <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                            width="24px">
-                            <path
-                                d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
-                        </svg>
-                    </md-filled-button>
-                </div>
+        <main>
+            <div class="slideshow-container">
+                <img class="slideshow-image" src="https://placehold.co/1600x900" width="1600px" height="900px"
+                    alt="Template Image 1600x900">
+                <img class="slideshow-image" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                    alt="Template Image 3000x2000">
+                <img class="slideshow-image" src="https://placehold.co/4000x3000" width="4000px" height="3000px"
+                    alt="Template Image 4000x3000">
             </div>
-            <md-filled-button interactive href="#section2">Section 2</md-filled-button>
-        </section>
-        <section class="elevated-card" id="section2">
-            <md-elevation></md-elevation>
-            <h2>Section Heading</h2>
-            <h3>Subheading</h3>
-            <div class="centered">
-                <div class="image-grid">
-                    <div class="clickable-image">
+            <h1>Page Heading</h1>
+            <section class="elevated-card">
+                <md-elevation></md-elevation>
+                <img class="hero-content" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
+                    alt="Template Image 3000x2000">
+                <h2>Section Heading</h2>
+                <h3>Subheading</h3>
+                <div class="side-by-side">
+                    <div class="left-side">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                        <ul>
+                            <li>List item 1</li>
+                            <li>List item 2</li>
+                            <li>List item 3</li>
+                        </ul>
+                    </div>
+                    <div class="right-side">
+                        <div class="table-container">
+                            <table>
+                                <th colspan="100%">Name</th>
+                                <tr>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                </tr>
+                                <tr>
+                                    <td>John<md-ripple></md-ripple></td>
+                                    <td>Doe<md-ripple></md-ripple></td>
+                                </tr>
+                                <tr>
+                                    <td>Jane<md-ripple></md-ripple></td>
+                                    <td>Doe<md-ripple></md-ripple></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <md-filled-button aria-label="Copy Table" onclick="copyTable(this)">
+                            Copy Table
+                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                width="24px">
+                                <path
+                                    d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
+                            </svg>
+                        </md-filled-button>
+                    </div>
+                </div>
+                <md-filled-button interactive href="#section2">Section 2</md-filled-button>
+            </section>
+            <section class="elevated-card" id="section2">
+                <md-elevation></md-elevation>
+                <h2>Section Heading</h2>
+                <h3>Subheading</h3>
+                <div class="centered">
+                    <div class="image-grid">
+                        <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/4000x3000" width="4000px"
                                 height="3000px" onclick="openLightbox()" alt="Template Image 4000x3000">
-                        <md-elevation></md-elevation>
-                    </div>
-                    <div class="clickable-image">
+                            <md-elevation></md-elevation>
+                        </div>
+                        <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/2000x2500" width="2000px"
                                 height="2500px" onclick="openLightbox()" alt="Template Image 2000x2500">
-                        <md-elevation></md-elevation>
-                    </div>
-                    <div class="clickable-image">
+                            <md-elevation></md-elevation>
+                        </div>
+                        <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/3000x2000" width="3000px"
                                 height="2000px" onclick="openLightbox()" alt="Template Image 3000x2000">
-                        <md-elevation></md-elevation>
-                    </div>
-                    <div class="clickable-image">
+                            <md-elevation></md-elevation>
+                        </div>
+                        <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/1600x900" width="1600px"
                                 height="900px" onclick="openLightbox()" alt="Template Image 1600x900">
-                        <md-elevation></md-elevation>
+                            <md-elevation></md-elevation>
                         </div>
                     </div>
                     <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare
@@ -260,13 +247,13 @@
                         consequat tempus est ridiculus ut. Consequat odio nisi interdum donec tristique natoque. Arcu mi
                         porttitor mauris platea quisque elementum ultrices. <a href="#!">Torquent curae suspendisse
                             sollicitudin etiam inceptos.</a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Footer</p>
-        <a href="#!">Link</a>
-    </footer>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Footer</p>
+            <a href="#!">Link</a>
+        </footer>
     </div>
 
     <script src="scripts/bundle.js"></script>
