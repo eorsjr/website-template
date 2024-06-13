@@ -1,8 +1,5 @@
-/**
- * This code is responsible for the lightbox feature.
- */
-
 let lightboxVisible = false;
+let currentSlideIndex;
 
 /**
  * Opens the lightbox by fading in the scrim and enabling the lightbox mode.
@@ -10,8 +7,11 @@ let lightboxVisible = false;
  */
 function openLightbox() {
     createScrim();
+    const scrim = document.getElementById("scrim");
     scrim.style.zIndex = 3;
-    $(".lightbox").css("display", "flex").hide().fadeIn(300);
+    const lightbox = document.querySelector(".lightbox");
+    lightbox.style.display = "flex";
+    fadeIn(lightbox, 300); // Fading in the lightbox
     lightboxVisible = true;
     toggleScrolling();
 }
@@ -22,12 +22,53 @@ function openLightbox() {
  */
 function closeLightbox() {
     removeScrim();
-    $(".lightbox").fadeOut(300);
+    const lightbox = document.querySelector(".lightbox");
+    fadeOut(lightbox, 300, () => {
+        lightbox.style.display = "none"; // Hide the lightbox after fading out
+    });
     lightboxVisible = false;
     toggleScrolling();
 }
 
-let currentSlideIndex;
+/**
+ * Function to animate the fade-in effect
+ */
+function fadeIn(element, duration, callback) {
+    let startTime = null;
+    function fade(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const elapsedTime = currentTime - startTime;
+        let opacity = elapsedTime / duration;
+        opacity = Math.min(opacity, 1);
+        element.style.opacity = opacity;
+        if (elapsedTime < duration) {
+            requestAnimationFrame(fade);
+        } else {
+            if (callback) callback();
+        }
+    }
+    requestAnimationFrame(fade);
+}
+
+/**
+ * Function to animate the fade-out effect
+ */
+function fadeOut(element, duration, callback) {
+    let startTime = null;
+    function fade(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const elapsedTime = currentTime - startTime;
+        let opacity = 1 - (elapsedTime / duration);
+        opacity = Math.max(opacity, 0);
+        element.style.opacity = opacity;
+        if (elapsedTime < duration) {
+            requestAnimationFrame(fade);
+        } else {
+            if (callback) callback();
+        }
+    }
+    requestAnimationFrame(fade);
+}
 
 /**
  * Switches the slide in the lightbox by the specified increment.
@@ -43,7 +84,12 @@ function switchSlide(n) {
  * Adjusts the slide index if it goes out of bounds and updates the image and caption.
  */
 function showSlides() {
-    let lightboxTargets = document.getElementsByClassName("lightbox-target");
+    const lightboxTargets = document.getElementsByClassName("lightbox-target");
+
+    // Make sure lightboxTargets is defined and populated
+    if (lightboxTargets.length === 0) {
+        return;
+    }
 
     // Hide navigation buttons if there is only one image
     if (lightboxTargets.length === 1) {
@@ -61,9 +107,9 @@ function showSlides() {
         currentSlideIndex = lightboxTargets.length - 1;
     }
 
-    let chosenImage = lightboxTargets[currentSlideIndex];
-    let caption = document.getElementById("lightbox-caption");
-    let lightboxImg = document.getElementById("lightbox-image");
+    const chosenImage = lightboxTargets[currentSlideIndex];
+    const caption = document.getElementById("lightbox-caption");
+    const lightboxImg = document.getElementById("lightbox-image");
 
     // Use data-src attribute if available, otherwise use src attribute
     if (chosenImage.getAttribute("data-src")) {
@@ -76,14 +122,17 @@ function showSlides() {
     caption.innerHTML = chosenImage.alt;
 }
 
-let lightboxTargets = document.getElementsByClassName("lightbox-target");
-
-// Add click event listeners to all lightbox targets to open the lightbox and show the clicked slide
-for (let i = 0; i < lightboxTargets.length; i++) {
-    lightboxTargets[i].addEventListener("click", function () {
-        currentSlideIndex = i;
-        showSlides();
-    });
+/**
+ * Adds click event listeners to all lightbox targets to open the lightbox and show the clicked slide.
+ */
+function addLightboxEventListeners() {
+    const lightboxTargets = document.getElementsByClassName("lightbox-target");
+    for (let i = 0; i < lightboxTargets.length; i++) {
+        lightboxTargets[i].addEventListener("click", function () {
+            currentSlideIndex = i;
+            showSlides();
+        });
+    }
 }
 
 /**
@@ -110,3 +159,4 @@ function appendLightboxHTML() {
 
 // Call the function to append the lightbox HTML when the document is ready
 document.addEventListener("DOMContentLoaded", appendLightboxHTML);
+addLightboxEventListeners();
