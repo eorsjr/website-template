@@ -74,7 +74,7 @@
     <nav>
         <div class="navigation-component">
             <md-elevation></md-elevation>
-            <button class="active-indicator" aria-label="Home" onclick="window.location.href='#';">
+            <button class="active-indicator" aria-label="Home">
                 <md-icon>
                     home<md-ripple></md-ripple>
                 </md-icon>
@@ -171,6 +171,7 @@
             </md-list>
         </div>
     </nav>
+    <div class="pane">
     <main>
         <div class="slideshow-container">
             <img class="slideshow-image" src="https://placehold.co/1600x900" width="1600px" height="900px"
@@ -190,10 +191,7 @@
             <div class="side-by-side">
                 <div class="left-side">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua.
-                    </p>
+                            labore et dolore magna aliqua.</p>
                     <ul>
                         <li>List item 1</li>
                         <li>List item 2</li>
@@ -237,40 +235,39 @@
             <div class="centered">
                 <div class="image-grid">
                     <div class="clickable-image">
-                        <img class="lightbox-target" src="https://placehold.co/4000x3000" width="4000px" height="3000px"
-                            onclick="openLightbox()" alt="Template Image 4000x3000">
+                            <img class="lightbox-target" src="https://placehold.co/4000x3000" width="4000px"
+                                height="3000px" onclick="openLightbox()" alt="Template Image 4000x3000">
                         <md-elevation></md-elevation>
                     </div>
                     <div class="clickable-image">
-                        <img class="lightbox-target" src="https://placehold.co/2000x2500" width="2000px" height="2500px"
-                            onclick="openLightbox()" alt="Template Image 2000x2500">
+                            <img class="lightbox-target" src="https://placehold.co/2000x2500" width="2000px"
+                                height="2500px" onclick="openLightbox()" alt="Template Image 2000x2500">
                         <md-elevation></md-elevation>
                     </div>
                     <div class="clickable-image">
-                        <img class="lightbox-target" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
-                            onclick="openLightbox()" alt="Template Image 3000x2000">
+                            <img class="lightbox-target" src="https://placehold.co/3000x2000" width="3000px"
+                                height="2000px" onclick="openLightbox()" alt="Template Image 3000x2000">
                         <md-elevation></md-elevation>
                     </div>
                     <div class="clickable-image">
-                        <img class="lightbox-target" src="https://placehold.co/1600x900" width="1600px" height="900px"
-                            onclick="openLightbox()" alt="Template Image 1600x900">
+                            <img class="lightbox-target" src="https://placehold.co/1600x900" width="1600px"
+                                height="900px" onclick="openLightbox()" alt="Template Image 1600x900">
                         <md-elevation></md-elevation>
+                        </div>
                     </div>
-                </div>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare quam.
-                    Rutrum torquent fames pretium sollicitudin habitant aptent lacus conubia. Tincidunt massa consequat
-                    tempus est ridiculus ut. Consequat odio nisi interdum donec tristique natoque. Arcu mi porttitor
-                    mauris platea quisque elementum ultrices. <a href="#!">Torquent curae suspendisse sollicitudin etiam
-                        inceptos.</a>
-                </p>
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare
+                        quam. Rutrum torquent fames pretium sollicitudin habitant aptent lacus conubia. Tincidunt massa
+                        consequat tempus est ridiculus ut. Consequat odio nisi interdum donec tristique natoque. Arcu mi
+                        porttitor mauris platea quisque elementum ultrices. <a href="#!">Torquent curae suspendisse
+                            sollicitudin etiam inceptos.</a></p>
             </div>
         </section>
     </main>
-
     <footer>
         <p>Footer</p>
         <a href="#!">Link</a>
     </footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="scripts/content-reveal.js"></script>
@@ -278,6 +275,7 @@
     <script src="scripts/elevation.js"></script>
     <script src="scripts/hide-on-scroll.js"></script>
     <script src="scripts/lightbox.js"></script>
+    <script src="scripts/scroll-to-top.js"></script>
     <script src="scripts/slideshow.js"></script>
     <script src="scripts/status-bar-color.js"></script>
     <script src="scripts/switch-style.js"></script>

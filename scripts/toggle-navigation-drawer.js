@@ -73,6 +73,9 @@ function toggleNavigation() {
 
     toggleScrolling();
     toggleMenuButton();
+    setTimeout(() => {
+        updateElevation();
+    }, 300);
 }
 
 // Event listener for menu button click to toggle the navigation drawer
