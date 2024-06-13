@@ -81,5 +81,10 @@ function toggleNavigation() {
 // Event listener for menu button click to toggle the navigation drawer
 document.getElementById("menu-button").addEventListener("click", toggleNavigation);
 
+// Event listener for navigation drawer item click to toggle the navigation drawer
+document.querySelectorAll(".navigation-drawer md-list md-list-item").forEach(item => {
+    item.addEventListener("click", toggleNavigation);
+});
+
 // Event listeners for window resize to update button text
 window.addEventListener("resize", toggleMenuButton);
