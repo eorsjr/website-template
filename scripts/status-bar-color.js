@@ -3,7 +3,7 @@
  */
 function updateThemeColor() {
     // Get the computed value of the CSS custom property for the theme color from the body element
-    const themeColor = getComputedStyle(document.body).getPropertyValue('--md-sys-color-background').trim();
+    const themeColor = getComputedStyle(document.body).getPropertyValue('--md-sys-color-surface-container').trim();
     // Set the theme color meta tag with the retrieved color
     setThemeColorMetaTag(themeColor);
 }
