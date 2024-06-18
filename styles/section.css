@@ -8,6 +8,7 @@ section {
     padding-top: 20px;
     padding-bottom: 20px;
     transition: width 1s ease, opacity 1s ease;
+    overflow: auto;
 }
 
 section:last-of-type {
@@ -23,8 +24,6 @@ section .hero-content {
     aspect-ratio: 16/9;
     object-fit: cover;
     margin-top: -20px;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
 }
 
 .centered {
