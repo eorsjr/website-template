@@ -1,6 +1,3 @@
 .DS_Store
-node_modules
-index.js
-package-lock.json
 package.json
 robots.txt
