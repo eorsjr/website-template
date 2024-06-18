@@ -27,10 +27,8 @@ body {
 
 /* || Typescale */
 
-:root {
-    --my-font: "Noto Sans", sans-serif;
-    --md-ref-typeface-plain: var(--my-font);
-    font-family: var(--my-font);
+body {
+    font-family: "Noto Sans", sans-serif;
 }
 
 h1 {
