@@ -17,16 +17,24 @@ function reveal() {
   let sections = document.querySelectorAll("section");
   let pane = document.querySelector(".pane");
 
-  let paneHeight = pane.clientHeight;
-  let paneTop = pane.getBoundingClientRect().top;
+  let parentHeight;
   let threshold = 150; // Threshold for revealing sections
 
   for (let section of sections) {
     let sectionRect = section.getBoundingClientRect();
-    let sectionTop = sectionRect.top - paneTop;
-    let sectionBottom = sectionRect.bottom - paneTop;
+    let sectionTop = sectionRect.top;
+    let sectionBottom = sectionRect.bottom;
 
-    if (sectionTop < paneHeight - threshold && sectionBottom > threshold) {
+    if (window.innerWidth >= 600) {
+      let paneTop = pane.getBoundingClientRect().top;
+      sectionTop -= paneTop;
+      sectionBottom -= paneTop;
+      parentHeight = pane.clientHeight;
+    } else {
+      parentHeight = window.innerHeight;
+    }
+
+    if (sectionTop < parentHeight - threshold && sectionBottom > threshold) {
       section.style.opacity = 1; // Set opacity to 1 to reveal section
     } else {
       section.style.opacity = 0; // Set opacity to 0 to hide section
@@ -35,6 +43,7 @@ function reveal() {
 }
 
 document.querySelector(".pane").addEventListener("scroll", reveal);
+window.addEventListener("scroll", reveal);
 window.addEventListener("resize", reveal);
 window.addEventListener("orientationchange", reveal);
 
