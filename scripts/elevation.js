@@ -12,10 +12,10 @@ function updateElevation() {
     // Toggle elevation level based on scroll position and navigation drawer visibility
     if (scrolled || (!scrolled && navigationDrawer.style.display == "flex")) {
         // If the page is scrolled or the navigation drawer is visible, set elevation level to 2
-        topAppBar.style.setProperty('--md-elevation-level', '2');
+        topAppBar.style.setProperty('box-shadow', 'var(--elevation-level-1)');
     } else {
         // If neither the page is scrolled nor the navigation drawer is visible, set elevation level to 0
-        topAppBar.style.setProperty('--md-elevation-level', '0');
+        topAppBar.style.setProperty('box-shadow', 'none');
     }
 }
 

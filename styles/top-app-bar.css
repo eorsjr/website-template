@@ -13,10 +13,14 @@
     padding-left: calc(16px + env(safe-area-inset-left));
     padding-right: calc(16px + env(safe-area-inset-right));
     background-color: var(--md-sys-color-surface-container);
-    transition: --md-elevation-level 250ms ease-in-out, top 0.5s ease;
+    transition: box-shadow 250ms ease-in-out, top 0.5s ease;
 }
 
-.top-app-bar #menu-button md-icon {
+.top-app-bar .filled-icon-button {
+    background: none;
+}
+
+.top-app-bar #menu-button {
     color: var(--md-sys-color-on-surface);
 }
 
@@ -29,15 +33,12 @@
     color: var(--md-sys-color-on-surface);
 }
 
-.top-app-bar #trailing-icons {
+.top-app-bar .trailing-icons {
     display: flex;
     margin-left: auto;
 }
 
-.top-app-bar #trailing-icons md-icon-button {
+.top-app-bar .trailing-icons .filled-icon-button {
     margin-left: 24px;
-}
-
-.top-app-bar #trailing-icons md-icon {
     color: var(--md-sys-color-on-surface-variant);
 }

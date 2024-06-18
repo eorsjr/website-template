@@ -16,30 +16,78 @@
   background-color: var(--md-sys-color-surface-container-low);
   transition: width 1s ease, transform 0.3s ease-in-out;
   border-radius: 0 16px 16px 0;
-  --md-elevation-level: 1;
+  box-shadow: var(--elevation-level-1);
 }
 
 .navigation-drawer.show {
   transform: translateX(0);
 }
 
-.navigation-drawer md-list {
+.navigation-drawer a {
+  text-decoration: none;
+}
+
+.navigation-drawer .list {
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: inherit;
   background-color: inherit;
 }
 
-.navigation-drawer md-list-item {
+.navigation-drawer .list-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
   margin-left: 12px;
   margin-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
   border-radius: 28px;
+  color: var(--md-sys-color-on-surface);
 }
 
-.navigation-drawer md-list-item.active-indicator {
+.navigation-drawer .list-item#active-indicator {
+  font-weight: 700;
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
+}
+
+@media (hover:none) {
+  .navigation-drawer .list-item {
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  }
+
+  .navigation-drawer .list-item:active {
+    background-color: var(--md-sys-color-inverse-surface) !important;
+    color: var(--md-sys-color-inverse-on-surface) !important;
+    transition: none;
+  }
+}
+
+@media (hover:hover) {
+  .navigation-drawer .list-item:hover {
+    background-color: var(--md-sys-color-inverse-surface) !important;
+    color: var(--md-sys-color-inverse-on-surface) !important;
+    /* transition: background-color 250ms ease-in-out, color 250ms ease-in-out; */
+  }
+
+  .navigation-drawer .list-item:active {
+    background-color: var(--md-sys-color-surface) !important;
+    color: var(--md-sys-color-on-surface) !important;
+    /* transition: none; */
+  }
 }
 
 /* For compact window class */
@@ -76,7 +124,7 @@
     padding-bottom: 16px;
     justify-content: space-evenly;
     transition: bottom 0.5s ease;
-    --md-elevation-level: 2;
+    box-shadow: var(--elevation-level-2);
   }
 
   /* For standalone mode */
@@ -95,27 +143,34 @@
 
   .navigation-component {
     flex-direction: column;
-    /* justify-content: center; */
     height: 100%;
     min-width: 80px;
     top: 0;
-    padding-top: calc(64px + 12px);
+    padding-top: 64px;
     padding-left: env(safe-area-inset-left);
     overflow: scroll;
   }
 }
 
+/* For large and extra-large window classes */
+@media (min-width:1200px) {
+  .navigation-component {
+    justify-content: center;
+  }
+}
+
 /* || Navigation component buttons */
 
-.navigation-component button {
+.navigation-component .nav-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: none;
+  cursor: pointer;
 }
 
-.navigation-component button .label-text {
+.navigation-component .nav-button .label-text {
   font-size: 12px;
   line-height: 16px;
   font-weight: 500;
@@ -123,12 +178,12 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-.navigation-component button.active-indicator .label-text {
+.navigation-component .nav-button#active-indicator .label-text {
   font-weight: 700;
   color: var(--md-sys-color-on-surface);
 }
 
-.navigation-component button md-icon {
+.navigation-component .nav-button .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,7 +194,7 @@
   color: var(--md-sys-color-on-surface-variant);
 }
 
-.navigation-component button.active-indicator md-icon {
+.navigation-component .nav-button#active-indicator .icon {
   font-variation-settings:
     'FILL' 1;
   background-color: var(--md-sys-color-secondary-container);
@@ -149,31 +204,58 @@
 /* For compact window class */
 @media (max-width: 599px) {
 
-  .navigation-component button md-icon {
+  .navigation-component .nav-button .icon {
     width: 64px;
   }
 }
 
 /* For medium, expanded, large and extra-large window classes */
 @media (min-width: 600px) {
-  .navigation-component button {
+  .navigation-component .nav-button {
     height: 56px;
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 12px;
   }
 
-  .navigation-component button md-icon {
+  .navigation-component .nav-button .icon {
     width: 56px;
   }
 }
 
-@media (hover:hover) {
-  .navigation-component button:hover .label-text {
-    color: var(--md-sys-color-on-surface);
+@media (hover:none) {
+  .navigation-component .nav-button .icon {
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  }
+
+  .navigation-component .nav-button .label-text {
+    transition: color 250ms ease-in-out;
+  }
+
+  .navigation-component .nav-button:active .icon {
+    background-color: var(--md-sys-color-inverse-surface) !important;
+    color: var(--md-sys-color-inverse-on-surface) !important;
+    transition: none;
+  }
+
+  .navigation-component .nav-button:active .label-text {
+    color: var(--md-sys-color-on-surface) !important;
+    transition: none;
   }
 }
 
-.navigation-component button:active .label-text {
-  color: var(--md-sys-color-on-surface);
+@media (hover:hover) {
+  .navigation-component .nav-button:hover .icon {
+    background-color: var(--md-sys-color-inverse-surface) !important;
+    color: var(--md-sys-color-inverse-on-surface) !important;
+  }
+
+  .navigation-component .nav-button:hover .label-text {
+    color: var(--md-sys-color-on-surface) !important;
+  }
+
+  .navigation-component .nav-button:active .icon {
+    background-color: var(--md-sys-color-surface) !important;
+    color: var(--md-sys-color-on-surface) !important;
+  }
 }

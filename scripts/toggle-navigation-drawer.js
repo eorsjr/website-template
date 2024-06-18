@@ -13,10 +13,10 @@ let navigationDrawerVisible = false;
 function toggleMenuButton() {
     if (navigationDrawerVisible) {
         document.getElementById("menu-button").ariaLabel = "Close Menu";
-        document.querySelector("#menu-button md-icon").innerHTML = "menu_open";
+        document.querySelector("#menu-button .icon").innerHTML = "menu_open";
     } else {
         document.getElementById("menu-button").ariaLabel = "Open Menu";
-        document.querySelector("#menu-button md-icon").innerHTML = "menu";
+        document.querySelector("#menu-button .icon").innerHTML = "menu";
     }
 }
 
@@ -82,7 +82,7 @@ function toggleNavigation() {
 document.getElementById("menu-button").addEventListener("click", toggleNavigation);
 
 // Event listener for navigation drawer item click to toggle the navigation drawer
-document.querySelectorAll(".navigation-drawer md-list md-list-item").forEach(item => {
+document.querySelectorAll(".navigation-drawer .list .list-item").forEach(item => {
     item.addEventListener("click", toggleNavigation);
 });
 

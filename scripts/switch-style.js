@@ -126,10 +126,10 @@ function handleColorSchemeChange() {
 function toggleSchemeButton() {
     if (document.body.classList.contains('dark')) {
         document.getElementById("color-scheme-button").ariaLabel = "Switch to Light Mode";
-        document.querySelector("#color-scheme-button md-icon").innerHTML = "light_mode";
+        document.querySelector("#color-scheme-button .icon").innerHTML = "light_mode";
     } else {
         document.getElementById("color-scheme-button").ariaLabel = "Switch to Dark Mode";
-        document.querySelector("#color-scheme-button md-icon").innerHTML = "dark_mode";
+        document.querySelector("#color-scheme-button .icon").innerHTML = "dark_mode";
     }
 }
 

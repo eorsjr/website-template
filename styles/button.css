@@ -1,0 +1,99 @@
+/* || Filled button */
+
+.filled-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    align-self: center;
+    gap: 8px;
+    height: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 20px;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.filled-button.with-icon {
+    padding-left: 16px;
+}
+
+.filled-button .label-text {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
+.filled-button .icon {
+    font-size: 18px;
+    color: var(--md-sys-color-on-primary);
+}
+
+@media (hover:none) {
+    .filled-button {
+        transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    }
+
+    .filled-button:active {
+        background-color: var(--md-sys-color-inverse-surface) !important;
+        color: var(--md-sys-color-inverse-on-surface) !important;
+        box-shadow: var(--elevation-level-1);
+        transition: none;
+    }
+}
+
+@media (hover:hover) {
+    .filled-button:hover {
+        background-color: var(--md-sys-color-inverse-surface) !important;
+        color: var(--md-sys-color-inverse-on-surface) !important;
+        box-shadow: var(--elevation-level-1);
+    }
+
+    .filled-button:active {
+        background-color: var(--md-sys-color-surface) !important;
+        color: var(--md-sys-color-on-surface) !important;
+    }
+}
+
+/* || Filled icon button */
+
+.filled-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.filled-icon-button .icon {
+    font-size: 24px;
+}
+
+@media (hover:none) {
+    .filled-icon-button {
+        transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+    }
+
+    .filled-icon-button:active {
+        background-color: var(--md-sys-color-inverse-surface) !important;
+        color: var(--md-sys-color-inverse-on-surface) !important;
+        transition: none;
+    }
+}
+
+@media (hover:hover) {
+    .filled-icon-button:hover {
+        background-color: var(--md-sys-color-inverse-surface) !important;
+        color: var(--md-sys-color-inverse-on-surface) !important;
+    }
+
+    .filled-icon-button:active {
+        background-color: var(--md-sys-color-surface) !important;
+        color: var(--md-sys-color-on-surface) !important;
+    }
+}

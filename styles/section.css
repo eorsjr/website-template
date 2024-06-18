@@ -109,7 +109,7 @@ section .hero-content {
     position: relative;
     border-radius: 12px;
     background-color: var(--md-sys-color-surface-container-low);
-    --md-elevation-level: 1;
+    box-shadow: var(--elevation-level-1);
 }
 
 /* || Clickable image */
@@ -117,18 +117,19 @@ section .hero-content {
 .clickable-image {
     position: relative;
     display: inline-block;
-    --md-elevation-level: 0;
-    transition: --md-elevation-level 250ms ease-in-out;
+    transition: box-shadow 250ms ease-in-out;
 }
 
-.clickable-image:active {
-    --md-elevation-level: 1;
-    transition: --md-elevation-level 0s ease-in-out;
+@media (hover:none) {
+    .clickable-image:active {
+        box-shadow: var(--elevation-level-1);
+        transition: none;
+    }
 }
 
 @media (hover:hover) {
     .clickable-image:hover {
-        --md-elevation-level: 1;
+        box-shadow: var(--elevation-level-1);
     }
 }
 
@@ -139,8 +140,6 @@ section .hero-content {
 
 /* || Section buttons */
 
-section md-filled-button {
-    width: fit-content;
-    align-self: center;
+section .filled-button {
     margin-bottom: 15px;
 }

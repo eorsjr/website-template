@@ -7,6 +7,7 @@
     <meta name="description" content="An advanced website template designed to be easily personalizable by end users.">
     <title>Website Template</title>
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/button.css">
     <link rel="stylesheet" href="styles/custom-elevation-levels.css">
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/image-grid.css">
@@ -33,129 +34,68 @@
 
 <body>
     <header class="top-app-bar">
-        <md-elevation></md-elevation>
-        <md-icon-button id="menu-button" aria-label="Open Menu">
-            <md-icon>
-                menu
-            </md-icon>
-        </md-icon-button>
+        <button class="filled-icon-button" id="menu-button" aria-label="Open Menu">
+            <span class="material-symbols-outlined icon">menu</span>
+        </button>
         <div id="headline">Headline</div>
-        <div id="trailing-icons">
-            <md-icon-button id="color-scheme-button" aria-label="Switch to Dark Mode">
-                <md-icon>
-                    dark_mode
-                </md-icon>
-            </md-icon-button>
-            <md-icon-button id="palette-button" aria-label="Toggle Color Palette">
-                <md-icon>
-                    palette
-                </md-icon>
-            </md-icon-button>
-            <md-icon-button id="font-button" aria-label="Toggle Font">
-                <md-icon>
-                    brand_family
-                </md-icon>
-            </md-icon-button>
+        <div class="trailing-icons">
+            <button class="filled-icon-button" id="color-scheme-button" aria-label="Switch to Dark Mode">
+                <span class="material-symbols-outlined icon">dark_mode</span>
+            </button>
+            <button class="filled-icon-button" id="palette-button" aria-label="Toggle Color Palette">
+                <span class="material-symbols-outlined icon">palette</span>
+            </button>
+            <button class="filled-icon-button" id="font-button" aria-label="Toggle Font">
+                <span class="material-symbols-outlined icon">brand_family</span>
+            </button>
         </div>
     </header>
     <nav>
         <div class="navigation-component">
-            <md-elevation></md-elevation>
-            <button class="active-indicator" aria-label="Home">
-                <md-icon>
-                    home<md-ripple></md-ripple>
-                </md-icon>
+            <button class="nav-button" id="active-indicator" aria-label="Home">
+                <span class="material-symbols-outlined icon">home</span>
                 <span class="label-text">Home</span>
             </button>
-            <button aria-label="About">
-                <md-icon>
-                    person<md-ripple></md-ripple>
-                </md-icon>
+            <button class="nav-button" aria-label="About">
+                <span class="material-symbols-outlined icon">person</span>
                 <span class="label-text">About</span>
             </button>
-            <button aria-label="Gallery">
-                <md-icon>
-                    photo<md-ripple></md-ripple>
-                </md-icon>
+            <button class="nav-button" aria-label="Gallery">
+                <span class="material-symbols-outlined icon">photo</span>
                 <span class="label-text">Gallery</span>
             </button>
-            <button aria-label="Blog">
-                <md-icon>
-                    newspaper<md-ripple></md-ripple>
-                </md-icon>
+            <button class="nav-button" aria-label="Blog">
+                <span class="material-symbols-outlined icon">newspaper</span>
                 <span class="label-text">Blog</span>
             </button>
-            <button aria-label="Contact">
-                <md-icon>
-                    contact_page<md-ripple></md-ripple>
-                </md-icon>
+            <button class="nav-button" aria-label="Contact">
+                <span class="material-symbols-outlined icon">contact_page</span>
                 <span class="label-text">Contact</span>
             </button>
         </div>
         <div class="navigation-drawer">
-            <md-elevation></md-elevation>
-            <md-list>
-                <md-list-item class="active-indicator" interactive href="index.html">
-                    Home
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    About
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Gallery
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Blog
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Contact
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 1
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 2
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 3
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 4
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 5
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 6
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 7
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 8
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 9
-                    <md-ripple></md-ripple>
-                </md-list-item>
-                <md-list-item>
-                    Other 10
-                    <md-ripple></md-ripple>
-                </md-list-item>
-            </md-list>
+            <div class="list">
+                <a class="list-item" id="active-indicator" href="index.html">Home</a>
+                <a class="list-item">About</a>
+                <a class="list-item">Gallery</a>
+                <a class="list-item">Blog</a>
+                <a class="list-item">Contact</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+                <a class="list-item">Other</a>
+            </div>
         </div>
     </nav>
     <div class="pane">
@@ -170,7 +110,6 @@
             </div>
             <h1>Page Heading</h1>
             <section class="elevated-card">
-                <md-elevation></md-elevation>
                 <img class="hero-content" src="https://placehold.co/3000x2000" width="3000px" height="2000px"
                     alt="Template Image 3000x2000">
                 <h2>Section Heading</h2>
@@ -194,29 +133,25 @@
                                     <th>Last name</th>
                                 </tr>
                                 <tr>
-                                    <td>John<md-ripple></md-ripple></td>
-                                    <td>Doe<md-ripple></md-ripple></td>
+                                    <td>John</td>
+                                    <td>Doe</td>
                                 </tr>
                                 <tr>
-                                    <td>Jane<md-ripple></md-ripple></td>
-                                    <td>Doe<md-ripple></md-ripple></td>
+                                    <td>Jane</td>
+                                    <td>Doe</td>
                                 </tr>
                             </table>
                         </div>
-                        <md-filled-button aria-label="Copy Table" onclick="copyTable(this)">
-                            Copy Table
-                            <svg slot="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
-                                width="24px">
-                                <path
-                                    d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
-                            </svg>
-                        </md-filled-button>
+                        <button class="filled-button with-icon" onclick="copyTable(this)">
+                            <span class="material-symbols-outlined icon">content_copy</span>
+                            <span class="label-text">Copy Table</span>
+                        </button>
                     </div>
                 </div>
-                <md-filled-button interactive href="#section2">Section 2</md-filled-button>
+                <button class="filled-button" onclick="window.location.href='#section2'"><span
+                        class="label-text">Section 2</span></button>
             </section>
             <section class="elevated-card" id="section2">
-                <md-elevation></md-elevation>
                 <h2>Section Heading</h2>
                 <h3>Subheading</h3>
                 <div class="centered">
@@ -224,22 +159,18 @@
                         <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/4000x3000" width="4000px"
                                 height="3000px" onclick="openLightbox()" alt="Template Image 4000x3000">
-                            <md-elevation></md-elevation>
                         </div>
                         <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/2000x2500" width="2000px"
                                 height="2500px" onclick="openLightbox()" alt="Template Image 2000x2500">
-                            <md-elevation></md-elevation>
                         </div>
                         <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/3000x2000" width="3000px"
                                 height="2000px" onclick="openLightbox()" alt="Template Image 3000x2000">
-                            <md-elevation></md-elevation>
                         </div>
                         <div class="clickable-image">
                             <img class="lightbox-target" src="https://placehold.co/1600x900" width="1600px"
                                 height="900px" onclick="openLightbox()" alt="Template Image 1600x900">
-                            <md-elevation></md-elevation>
                         </div>
                     </div>
                     <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Metus lacus aliquet iaculis mollis ornare
@@ -255,8 +186,7 @@
             <a href="#!">Link</a>
         </footer>
     </div>
-
-    <script src="scripts/bundle.js"></script>
+    
     <script src="scripts/content-reveal.js"></script>
     <script src="scripts/copy-table.js"></script>
     <script src="scripts/elevation.js"></script>

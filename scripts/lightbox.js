@@ -141,15 +141,15 @@ function addLightboxEventListeners() {
 function appendLightboxHTML() {
     const lightboxHTML = `
     <div class="lightbox">
-        <md-filled-icon-button id="close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
-            <md-icon>close</md-icon>
-        </md-filled-icon-button>
-        <md-filled-icon-button id="previous-button" aria-label="Previous" onclick="switchSlide(-1)">
-            <md-icon>arrow_back</md-icon>
-        </md-filled-icon-button>
-        <md-filled-icon-button id="next-button" aria-label="Next" onclick="switchSlide(+1)">
-            <md-icon>arrow_forward</md-icon>
-        </md-filled-icon-button>
+        <button class="filled-icon-button" id="close-button" aria-label="Close Lightbox" onclick="closeLightbox()">
+            <span class="material-symbols-outlined icon">close</span>
+        </button>
+        <button class="filled-icon-button" id="previous-button" aria-label="Previous" onclick="switchSlide(-1)">
+            <span class="material-symbols-outlined icon">arrow_back</span>
+        </button>
+        <button class="filled-icon-button" id="next-button" aria-label="Next" onclick="switchSlide(+1)">
+            <span class="material-symbols-outlined icon">arrow_forward</span>
+        </button>
         <img id="lightbox-image">
         <div id="lightbox-caption"></div>
     </div>

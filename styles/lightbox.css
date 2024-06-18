@@ -25,6 +25,11 @@
 
 /* || Lightbox buttons */
 
+.lightbox .filled-icon-button {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
 .lightbox #close-button {
     position: absolute;
     top: 24px;
