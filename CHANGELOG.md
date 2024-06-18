@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+### [v4.0.0](https://github.com/eorsjr/website-template/compare/v3.3.0...v4.0.0)
+
+> 18 June 2024
+
+- feat: :sparkles: replace mwc with custom components [`5066625`](https://github.com/eorsjr/website-template/commit/50666250c62a087c02369177400780cefa1a39bc)
+- feat: :sparkles: implement top app bar [`d8c42e5`](https://github.com/eorsjr/website-template/commit/d8c42e5e3c4995ef2bd43fe01e2391510fd8ad86)
+- feat: :sparkles: introduce pane element [`a240afc`](https://github.com/eorsjr/website-template/commit/a240afcdbac108dddccd2947643375b438705341)
+- perf: :zap: replace jquery with javascript [`673c3b3`](https://github.com/eorsjr/website-template/commit/673c3b396555df5d45ea9c46418a06a4452da178)
+- feat: :lipstick: update theme color meta tag [`3e3a9d1`](https://github.com/eorsjr/website-template/commit/3e3a9d15cf71fdadd5a40fac361883c5b843f43a)
+- fix: :bug: update clickable-image transition [`e11370c`](https://github.com/eorsjr/website-template/commit/e11370c339d7f28633b448116a4ed75229c26f43)
+- fix: :bug: update top app bar margins [`c68e765`](https://github.com/eorsjr/website-template/commit/c68e7658af030f1cefde559caf877cf36e688872)
+- feat: :sparkles: toggle navigation drawer on item click [`26b8109`](https://github.com/eorsjr/website-template/commit/26b810990c4f4ece80d9a5aa78b30666ac581eec)
+- feat: :lipstick: change theme-color to surface-container [`1188249`](https://github.com/eorsjr/website-template/commit/118824917ad23654dca7d523abc3e6112600a916)
+- fix: :bug: remove overflow property [`8542c59`](https://github.com/eorsjr/website-template/commit/8542c5979c117929f01bce10d97f6c9a0a39c699)
+- fix: :bug: set body width to 100% [`951a5c3`](https://github.com/eorsjr/website-template/commit/951a5c35e1b0c896be9c1e4cccf8959f0ca74b35)
+
 #### [v3.3.0](https://github.com/eorsjr/website-template/compare/v3.2.0...v3.3.0)
 
 > 6 June 2024
