@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v4.0.1](https://github.com/eorsjr/website-template/compare/v4.0.0...v4.0.1)
+
+> 18 June 2024
+
+- fix: :dizzy: update content reveal for compact sizes [`6bdbc67`](https://github.com/eorsjr/website-template/commit/6bdbc67fcf14840af2feda6330272af65f457836)
+
 ### [v4.0.0](https://github.com/eorsjr/website-template/compare/v3.3.0...v4.0.0)
 
 > 18 June 2024
