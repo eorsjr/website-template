@@ -5,10 +5,10 @@ function hideNavComponent() {
     const lightbox = document.querySelector(".lightbox");
     const currentScrollPos = window.scrollY;
 
-    // Check if the window size is within the compact window class and navigation drawer and lightbox are not visible
-    if (window.innerWidth < 600 && !navigationDrawerVisible && getComputedStyle(lightbox).display === "none") {
+    // Check if navigation drawer and lightbox are not visible
+    if (!navigationDrawerVisible && getComputedStyle(lightbox).display === "none") {
         // If scrolling up or at the top of the page, show the navigation component; otherwise, hide it
-        if (prevScrollPos > currentScrollPos || currentScrollPos < 1) {
+        if (window.innerWidth >= 600 || prevScrollPos > currentScrollPos || currentScrollPos < 1) {
             navigationComponent.classList.remove('remove');
         } else {
             navigationComponent.classList.add('remove');
@@ -40,12 +40,6 @@ let prevScrollPos = window.scrollY;
 // Event listeners
 window.addEventListener('scroll', () => {
     hideNavComponent();
-    hideTopAppBar();
-    // Update previous scroll position
-    prevScrollPos = window.scrollY;
-});
-
-window.addEventListener("resize", () => {
     hideTopAppBar();
     // Update previous scroll position
     prevScrollPos = window.scrollY;
