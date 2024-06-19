@@ -14,7 +14,5 @@ function scrollToTop() {
     }
 }
 
-// Add a click event listener to the element with the id 'active-indicator'
-// inside an element with the class 'navigation-component'
-// When this element is clicked, the scrollToTop function is called
+// Event listener
 document.querySelector('.navigation-component #active-indicator').addEventListener('click', scrollToTop);

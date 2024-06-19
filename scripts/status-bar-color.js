@@ -29,5 +29,5 @@ function setThemeColorMetaTag(color) {
     themeColorMetaTag.setAttribute('content', color);
 }
 
-// Add an event listener to update the theme color when the DOM content is fully loaded
+// Event listener
 document.addEventListener('DOMContentLoaded', updateThemeColor);
