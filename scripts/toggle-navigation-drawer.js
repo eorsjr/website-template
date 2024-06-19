@@ -4,14 +4,15 @@
 
 const navigationDrawer = document.querySelector(".navigation-drawer");
 let navigationDrawerVisible = false;
+let navigationDrawerOpen = false;
 
 /**
- * Toggles the text and aria-label of the menu button between "menu" and "close" based on the visibility of the navigation drawer.
- * If the navigation drawer is visible, it updates the button's text and aria-label to indicate closing the menu.
- * If the navigation drawer is not visible, it updates the button's text and aria-label to indicate opening the menu.
+ * Toggles the text and aria-label of the menu button based on whether the navigation drawer is open.
+ * If the navigation drawer is open, it updates the button's text and aria-label to indicate closing the menu.
+ * If the navigation drawer is not open, it updates the button's text and aria-label to indicate opening the menu.
  */
 function toggleMenuButton() {
-    if (navigationDrawerVisible) {
+    if (navigationDrawerOpen) {
         document.getElementById("menu-button").ariaLabel = "Close Menu";
         document.querySelector("#menu-button .icon").innerHTML = "menu_open";
     } else {
@@ -26,7 +27,7 @@ function toggleMenuButton() {
  * @function showNavigationDrawer
  */
 function showNavigationDrawer() {
-    navigationDrawer.style.display = "flex";
+    navigationDrawerVisible = true;
     requestAnimationFrame(() => {
         navigationDrawer.classList.add('show');
     });
@@ -40,14 +41,14 @@ function showNavigationDrawer() {
 function hideNavigationDrawer() {
     navigationDrawer.classList.remove('show');
     setTimeout(() => {
-        navigationDrawer.style.display = "none";
+        navigationDrawerVisible = false;
     }, 300);
 }
 
 /**
- * Toggles the visibility of the navigation drawer.
+ * Toggles the navigation drawer.
  * 
- * When invoked, this function toggles the visibility of the navigation drawer,
+ * When invoked, this function toggles the navigation drawer,
  * animating its appearance or disappearance accordingly. It also updates the
  * menu button text to reflect the current state and toggles the scrolling
  * behavior to prevent scrolling when the drawer is open.
@@ -55,9 +56,9 @@ function hideNavigationDrawer() {
  * @function toggleNavigation
  */
 function toggleNavigation() {
-    navigationDrawerVisible = !navigationDrawerVisible;
+    navigationDrawerOpen = !navigationDrawerOpen;
 
-    if (navigationDrawerVisible) {
+    if (navigationDrawerOpen) {
         createScrim();
         const scrim = document.getElementById("scrim");
         scrim.addEventListener("click", toggleNavigation);
@@ -73,9 +74,7 @@ function toggleNavigation() {
 
     toggleScrolling();
     toggleMenuButton();
-    setTimeout(() => {
-        updateElevation();
-    }, 300);
+    updateElevation();
 }
 
 // Event listener for menu button click to toggle the navigation drawer
@@ -86,5 +85,10 @@ document.querySelectorAll(".navigation-drawer .list .list-item").forEach(item =>
     item.addEventListener("click", toggleNavigation);
 });
 
-// Event listeners for window resize to update button text
+// Event listener for window resize to update button text
 window.addEventListener("resize", toggleMenuButton);
+
+// Event listener for window load to add set transition property
+window.addEventListener('load', ()=> {
+    navigationDrawer.style.transition = 'width 1s ease, transform 0.3s ease-in-out';
+});

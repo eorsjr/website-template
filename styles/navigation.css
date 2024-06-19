@@ -3,8 +3,7 @@
 /* || Navigation drawer */
 
 .navigation-drawer {
-  display: none;
-  /* Initially hidden */
+  display: flex;
   flex-direction: column;
   position: fixed;
   z-index: 2;
@@ -12,11 +11,10 @@
   top: 64px;
   left: 0;
   padding-bottom: env(safe-area-inset-bottom);
-  transform: translateX(-100%);
   background-color: var(--md-sys-color-surface-container-low);
-  transition: width 1s ease, transform 0.3s ease-in-out;
   border-radius: 0 16px 16px 0;
   box-shadow: var(--elevation-level-1);
+  transform: translateX(-100%);
 }
 
 .navigation-drawer.show {
@@ -112,6 +110,10 @@
   background-color: var(--md-sys-color-surface-container);
 }
 
+.navigation-component.remove {
+  transform: translateY(100%);
+}
+
 /* For compact window class */
 @media (max-width: 599px) {
   .navigation-component {
@@ -121,8 +123,9 @@
     padding-top: 12px;
     padding-bottom: 16px;
     justify-content: space-evenly;
-    transition: bottom 0.5s ease;
     box-shadow: var(--elevation-level-2);
+    transform: translateY(0);
+    transition: transform 0.5s ease;
   }
 
   /* For standalone mode */

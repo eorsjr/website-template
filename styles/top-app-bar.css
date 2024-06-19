@@ -13,7 +13,12 @@
     padding-left: calc(16px + env(safe-area-inset-left));
     padding-right: calc(16px + env(safe-area-inset-right));
     background-color: var(--md-sys-color-surface-container);
-    transition: box-shadow 250ms ease-in-out, top 0.5s ease;
+    transform: translateY(0);
+    transition: box-shadow 250ms ease-in-out, transform 0.5s ease;
+}
+
+.top-app-bar.remove {
+    transform: translateY(-100%);
 }
 
 .top-app-bar .filled-icon-button {

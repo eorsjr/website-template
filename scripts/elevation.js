@@ -10,7 +10,7 @@ function updateElevation() {
     const scrolled = window.scrollY > 0;
 
     // Toggle elevation level based on scroll position and navigation drawer visibility
-    if (scrolled || (!scrolled && navigationDrawer.style.display == "flex")) {
+    if (scrolled || (!scrolled && navigationDrawerOpen)) {
         // If the page is scrolled or the navigation drawer is visible, set elevation level to 2
         topAppBar.style.setProperty('box-shadow', 'var(--elevation-level-1)');
     } else {
@@ -19,7 +19,6 @@ function updateElevation() {
     }
 }
 
-// Add event listeners to update the elevation when scroll, change, or resize events occur
+// Event listeners
 window.addEventListener('scroll', updateElevation);
-window.addEventListener('change', updateElevation);
 window.addEventListener('resize', updateElevation);

@@ -10,7 +10,7 @@ let scrollPos = 0;
  * Toggles scrolling behavior depending on the presence of overlays.
  */
 function toggleScrolling() {
-    if (navigationDrawerVisible || lightboxVisible) {
+    if (navigationDrawerOpen || lightboxVisible) {
         // If any overlay is visible, disable scrolling
         scrollPos = window.scrollY; // Store the current scroll position
         document.body.style.top = "-" + scrollPos + "px"; // Offset the body to maintain current scroll position
@@ -36,6 +36,7 @@ function toggleScrolling() {
     }
 }
 
+// Event listener
 window.addEventListener('resize', () => {
     if (window.innerWidth < 600) {
         document.body.style.overflow = "scroll"; // Enable vertical scrolling

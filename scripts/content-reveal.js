@@ -42,10 +42,10 @@ function reveal() {
   }
 }
 
+// Event listeners
 document.querySelector(".pane").addEventListener("scroll", reveal);
 window.addEventListener("scroll", reveal);
 window.addEventListener("resize", reveal);
-window.addEventListener("orientationchange", reveal);
 
 // Initially reveal sections when the page loads
 reveal();
