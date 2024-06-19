@@ -43,3 +43,20 @@ window.addEventListener('resize', () => {
         document.body.style.overflow = "hidden"; // Disable vertical scrolling
     }
 });
+
+/**
+ * Prevents the browser from automatically restoring the scroll position when the page is refreshed.
+ * 
+ * This function checks if the 'scrollRestoration' property is supported in the browser's history object.
+ * If supported, it sets 'scrollRestoration' to 'manual' to prevent the default scroll restoration behavior.
+ */
+function preventScrollRestoration() {
+    // Check if the 'scrollRestoration' property is available in the history object
+    if ('scrollRestoration' in history) {
+        // Set 'scrollRestoration' to 'manual' to disable automatic scroll restoration
+        history.scrollRestoration = 'manual';
+    }
+}
+
+// Call the function to prevent scroll restoration
+preventScrollRestoration();
