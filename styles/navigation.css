@@ -107,6 +107,8 @@
   display: flex;
   position: fixed;
   z-index: 1;
+  padding-top: 12px;
+  padding-bottom: 16px;
   background-color: var(--md-sys-color-surface-container);
 }
 
@@ -120,8 +122,6 @@
     height: 80px;
     width: 100%;
     bottom: 0;
-    padding-top: 12px;
-    padding-bottom: 16px;
     justify-content: space-evenly;
     box-shadow: var(--elevation-level-2);
     transform: translateY(0);
@@ -144,10 +144,10 @@
 
   .navigation-component {
     flex-direction: column;
-    height: 100%;
+    row-gap: 12px;
+    height: calc(100% - 64px);
     min-width: 80px;
-    top: 0;
-    padding-top: 64px;
+    top: 64px;
     padding-left: env(safe-area-inset-left);
     overflow: scroll;
   }
@@ -216,7 +216,6 @@
     height: 56px;
     margin-left: 12px;
     margin-right: 12px;
-    margin-bottom: 12px;
   }
 
   .navigation-component .nav-button .icon {
