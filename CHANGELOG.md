@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v4.1.0](https://github.com/eorsjr/website-template/compare/v4.0.1...v4.1.0)
+
+> 30 June 2024
+
+- feat: :sparkles: add new card and button types + update spacing [`90a3389`](https://github.com/eorsjr/website-template/commit/90a3389ddc43fdaadd4a8ec96559b30bad34391f)
+- perf: :zap: improve performance [`4e1c0f4`](https://github.com/eorsjr/website-template/commit/4e1c0f4e1df3e53cb21e6ab4d802a246f82dd8f5)
+- feat: :sparkles: prevent scroll restoration [`7512002`](https://github.com/eorsjr/website-template/commit/7512002ae87c09f049585ed0065a30e2e4c67171)
+- fix: :bug: prevent navigation component hide [`8a50d0f`](https://github.com/eorsjr/website-template/commit/8a50d0f785534c376dab9a9841a3086bccffc642)
+- feat: :lipstick: adjust navigation component layout [`717a97f`](https://github.com/eorsjr/website-template/commit/717a97f76680866869b5e06dfe7f0e83a77c5d1a)
+- feat: :lipstick: adjust image-grid layout [`1f37dee`](https://github.com/eorsjr/website-template/commit/1f37deecd0858b7ef8fe33846a26dd22ce0fb7c7)
+
 #### [v4.0.1](https://github.com/eorsjr/website-template/compare/v4.0.0...v4.0.1)
 
 > 18 June 2024
