@@ -2,17 +2,12 @@
 
 .image-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    gap: 4px;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.image-grid .clickable-image {
-    margin: 10px auto;
+    margin-bottom: 16px;
 }
 
 /* For compact, medium and expanded window classes */
