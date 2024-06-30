@@ -1,61 +1,153 @@
-/* || Filled button */
+/* || Action area */
 
-.filled-button {
+.action-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.action-area .common-button {
+    margin: initial;
+}
+
+/* || General button */
+
+button {
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/* || Common buttons */
+
+.common-button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    align-self: center;
     gap: 8px;
     height: 40px;
+    margin: 24px auto;
     padding-left: 24px;
     padding-right: 24px;
     border-radius: 20px;
-    background-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-    transition: box-shadow 250ms ease-in-out;
 }
 
-.filled-button.with-icon {
+.common-button.with-icon {
     padding-left: 16px;
 }
 
-.filled-button .label-text {
+.common-button .label-text {
     line-height: 24px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.1px;
 }
 
-.filled-button .icon {
+.common-button .icon {
     font-size: 18px;
-    color: var(--md-sys-color-on-primary);
+}
+
+.filled-button,
+.filled-tonal-button {
+    transition: box-shadow 250ms ease-in-out;
 }
 
 @media (hover:none) {
-    .filled-button {
+
+    .filled-button,
+    .filled-tonal-button,
+    .outlined-button,
+    .common-button .icon {
         transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
     }
 
-    .filled-button:active {
+    .filled-button:active,
+    .filled-tonal-button:active,
+    .outlined-button:active {
         background-color: var(--md-sys-color-inverse-surface) !important;
         color: var(--md-sys-color-inverse-on-surface) !important;
-        box-shadow: var(--elevation-level-1);
         transition: none;
+    }
+
+    .common-button:active .icon {
+        color: var(--md-sys-color-inverse-on-surface) !important;
+        transition: none;
+    }
+
+    .filled-button:active,
+    .filled-tonal-button:active {
+        box-shadow: var(--elevation-level-1);
     }
 }
 
 @media (hover:hover) {
-    .filled-button:hover {
+
+    .filled-button:hover,
+    .filled-tonal-button:hover,
+    .outlined-button:hover {
         background-color: var(--md-sys-color-inverse-surface) !important;
         color: var(--md-sys-color-inverse-on-surface) !important;
+    }
+
+    .common-button:hover .icon {
+        color: var(--md-sys-color-inverse-on-surface) !important;
+    }
+
+    .filled-button:hover,
+    .filled-tonal-button:hover {
         box-shadow: var(--elevation-level-1);
     }
 
-    .filled-button:active {
+    .filled-button:active,
+    .filled-tonal-button:active,
+    .outlined-button:active {
         background-color: var(--md-sys-color-surface) !important;
         color: var(--md-sys-color-on-surface) !important;
     }
+
+    .common-button:active .icon {
+        color: var(--md-sys-color-on-surface) !important;
+    }
+}
+
+/* || Filled button */
+
+.filled-button {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+}
+
+.filled-button .icon {
+    color: var(--md-sys-color-on-primary);
+}
+
+/* || Filled tonal button */
+
+.filled-tonal-button {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+.filled-tonal-button .icon {
+    color: var(--md-sys-color-on-secondary-container);
+}
+
+/* || Outlined button */
+
+.outlined-button {
+    background: none;
+    color: var(--md-sys-color-primary);
+    border: 1px var(--md-sys-color-outline) solid;
+}
+
+.outlined-button .icon {
+    color: var(--md-sys-color-primary);
 }
 
 /* || Filled icon button */
