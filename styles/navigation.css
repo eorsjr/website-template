@@ -110,6 +110,12 @@
   padding-top: 12px;
   padding-bottom: 16px;
   background-color: var(--md-sys-color-surface-container);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.navigation-component::-webkit-scrollbar {
+  display: none; /* WebKit browsers */
 }
 
 .navigation-component.remove {
