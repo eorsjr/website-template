@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v4.1.1](https://github.com/eorsjr/website-template/compare/v4.1.0...v4.1.1)
+
+> 19 August 2024
+
+- fix: :bug: prevent section flicker on load [`2ddebe9`](https://github.com/eorsjr/website-template/commit/2ddebe95c2e812eaf3a280aff670b1be096b07b3)
+- feat: :lipstick: hide scrollbar of nav component [`4a844a1`](https://github.com/eorsjr/website-template/commit/4a844a118607ebf3936446b33523a9c6fd622df6)
+
 #### [v4.1.0](https://github.com/eorsjr/website-template/compare/v4.0.1...v4.1.0)
 
 > 30 June 2024
