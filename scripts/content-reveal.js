@@ -2,10 +2,8 @@
  * This code is responsible for revealing sections with an animation.
  */
 
-// Set initial opacity of sections to 0
-document.querySelectorAll("section").forEach(section => {
-  section.style.opacity = 0;
-});
+// Initially reveal sections when the page loads
+reveal();
 
 /**
  * Reveals sections with an animation when they enter the viewport.
@@ -46,6 +44,3 @@ function reveal() {
 document.querySelector(".pane").addEventListener("scroll", reveal);
 window.addEventListener("scroll", reveal);
 window.addEventListener("resize", reveal);
-
-// Initially reveal sections when the page loads
-reveal();
